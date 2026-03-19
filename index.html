@@ -51,11 +51,9 @@
   .btn-secondary:hover { border-color: var(--indigo); color: var(--indigo); transform: translateY(-1px); }
   .hero-note { font-size: 13px; color: var(--muted); margin-top: 16px; animation: fadeUp 0.5s 0.4s ease both; }
 
-  .beta-banner { background: linear-gradient(135deg, #fef3c7, #fde68a); border: 1.5px solid #fcd34d; border-radius: 16px; padding: 14px 20px; margin: 0 auto 48px; max-width: 700px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #92400e; line-height: 1.5; }
-  .beta-banner strong { font-family: 'Nunito', sans-serif; font-weight: 800; }
-
+  /* Phone mockup */
   .mockup-section { padding: 20px 24px 80px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; animation: fadeUp 0.6s 0.4s ease both; }
-  .phone { width: 220px; background: var(--navy); border-radius: 40px; padding: 16px 14px; box-shadow: 0 24px 80px rgba(30,27,75,0.25), 0 0 0 1px rgba(255,255,255,0.08); position: relative; overflow: hidden; transform: rotate(-2deg); transition: transform 0.3s; }
+  .phone { width: 220px; flex-shrink: 0; background: var(--navy); border-radius: 40px; padding: 16px 14px; box-shadow: 0 24px 80px rgba(30,27,75,0.25), 0 0 0 1px rgba(255,255,255,0.08); position: relative; overflow: hidden; transform: rotate(-2deg); transition: transform 0.3s; }
   .phone:nth-child(2) { transform: rotate(1.5deg) translateY(-20px); }
   .phone:hover { transform: rotate(0deg) translateY(-4px) !important; }
   .phone-notch { width: 80px; height: 22px; background: var(--navy); border-radius: 0 0 16px 16px; margin: 0 auto 10px; position: relative; z-index: 2; }
@@ -93,7 +91,7 @@
   .k-task.done { border-color: var(--green); opacity: 0.7; }
   .k-task.done .k-task-btn { background: var(--green); }
 
-  /* Demo video section */
+  /* Demo video */
   .video-section { padding: 0 24px 80px; max-width: 800px; margin: 0 auto; text-align: center; }
   .video-label { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--indigo); margin-bottom: 12px; }
   .video-title { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(24px, 4vw, 36px); letter-spacing: -1px; line-height: 1.1; color: var(--navy); margin-bottom: 28px; }
@@ -171,15 +169,34 @@
   .price-btn-paid { background: var(--indigo); color: white; box-shadow: 0 4px 16px rgba(91,94,244,0.3); }
   .price-btn-paid:hover { background: var(--indigo-dark); transform: translateY(-1px); }
 
-  .cta-section { background: linear-gradient(135deg, var(--indigo) 0%, var(--purple) 100%); border-radius: 32px; padding: 72px 48px; text-align: center; color: white; max-width: 800px; margin: 0 auto 80px; position: relative; overflow: hidden; }
-  .cta-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: rgba(255,255,255,0.06); border-radius: 50%; }
-  .cta-section h2 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(28px, 5vw, 44px); letter-spacing: -1.5px; margin-bottom: 16px; position: relative; }
-  .cta-section p { font-size: 17px; opacity: 0.8; margin-bottom: 32px; position: relative; }
-  .cta-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: relative; }
-  .btn-white { background: white; color: var(--indigo); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; padding: 14px 28px; border-radius: 16px; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
-  .btn-ghost { background: rgba(255,255,255,0.15); color: white; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 15px; padding: 14px 24px; border-radius: 16px; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.2s; }
-  .btn-ghost:hover { background: rgba(255,255,255,0.25); }
+  /* Beta signup */
+  .beta-section { background: linear-gradient(135deg, var(--indigo) 0%, var(--purple) 100%); border-radius: 32px; padding: 64px 48px; text-align: center; color: white; max-width: 800px; margin: 0 auto 80px; position: relative; overflow: hidden; }
+  .beta-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: rgba(255,255,255,0.06); border-radius: 50%; pointer-events: none; }
+  .beta-section::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 300px; height: 300px; background: rgba(255,255,255,0.04); border-radius: 50%; pointer-events: none; }
+  .beta-section h2 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(26px, 5vw, 40px); letter-spacing: -1.5px; margin-bottom: 12px; position: relative; }
+  .beta-section > p { font-size: 16px; opacity: 0.8; margin-bottom: 36px; position: relative; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .beta-form { background: white; border-radius: 24px; padding: 32px; max-width: 520px; margin: 0 auto; position: relative; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+  .form-group label { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; color: var(--text); text-align: left; }
+  .form-group label span { color: var(--muted); font-weight: 600; }
+  .form-group input, .form-group select { padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 12px; font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--text); background: var(--bg); transition: border-color 0.15s; outline: none; width: 100%; }
+  .form-group input:focus, .form-group select:focus { border-color: var(--indigo); background: white; }
+  .form-group input::placeholder { color: var(--muted); }
+  .form-submit { width: 100%; padding: 15px; border-radius: 14px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; cursor: pointer; border: none; background: var(--indigo); color: white; box-shadow: 0 4px 16px rgba(91,94,244,0.3); transition: all 0.2s; margin-top: 8px; }
+  .form-submit:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+  .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .form-note { font-size: 12px; color: var(--muted); margin-top: 12px; text-align: center; }
+  .form-success { display: none; text-align: center; padding: 8px 0; }
+  .form-success-icon { font-size: 48px; margin-bottom: 12px; }
+  .form-success h3 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 22px; color: var(--navy); margin-bottom: 8px; }
+  .form-success p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+  .form-error { display: none; background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 10px; padding: 10px 14px; font-size: 13px; color: #dc2626; margin-bottom: 12px; text-align: left; }
+  .beta-banner { background: linear-gradient(135deg, #fef3c7, #fde68a); border: 1.5px solid #fcd34d; border-radius: 16px; padding: 14px 20px; margin: 0 auto 48px; max-width: 700px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #92400e; line-height: 1.5; }
+  .beta-banner strong { font-family: 'Nunito', sans-serif; font-weight: 800; }
+  .cta-contact { text-align: center; margin-top: 20px; position: relative; }
+  .cta-contact a { color: rgba(255,255,255,0.6); font-size: 13px; text-decoration: none; transition: color 0.15s; }
+  .cta-contact a:hover { color: white; }
 
   footer { background: var(--navy); color: rgba(255,255,255,0.5); padding: 48px 24px 32px; text-align: center; }
   .footer-logo { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 24px; color: white; margin-bottom: 8px; }
@@ -200,9 +217,11 @@
   @media (max-width: 600px) {
     nav .nav-links .nav-link:not(.nav-cta) { display: none; }
     .mockup-section { gap: 12px; }
-    .phone { width: 170px; }
+    .phone { width: 200px; max-width: 200px; }
     .phone:nth-child(2) { display: none; }
-    .cta-section { padding: 48px 24px; border-radius: 24px; }
+    .beta-section { padding: 40px 20px; border-radius: 24px; }
+    .beta-form { padding: 24px 20px; }
+    .form-row { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -214,19 +233,19 @@
     <a href="#how" class="nav-link">How it works</a>
     <a href="#features" class="nav-link">Features</a>
     <a href="#pricing" class="nav-link">Pricing</a>
-    <a href="https://chirp2-sable.vercel.app" class="nav-link nav-cta">Try Beta →</a>
+    <a href="#beta" class="nav-link nav-cta">Request Beta Access</a>
   </div>
 </nav>
 
 <div class="hero">
-  <div class="hero-badge">🐦 Now in beta — join early families</div>
+  <div class="hero-badge">🐦 Coming soon to the App Store</div>
   <h1>Screen time kids actually <span class="accent2">earn.</span></h1>
   <p class="hero-sub">Set tasks. Kids complete them. Screen time unlocks — and enforces automatically on Nintendo Switch. No more fights.</p>
   <div class="hero-actions">
-    <a href="https://chirp2-sable.vercel.app" class="btn-primary">🐦 Try Chirp Free</a>
+    <a href="#beta" class="btn-primary">🐦 Request Beta Access</a>
     <a href="#how" class="btn-secondary">See how it works</a>
   </div>
-  <p class="hero-note">Free during beta · No credit card · Works in 5 minutes</p>
+  <p class="hero-note">Free for beta families · No credit card · Invite-based</p>
 </div>
 
 <div class="mockup-section">
@@ -453,7 +472,7 @@
         <li class="muted">Push notifications</li>
         <li class="muted">Nintendo Switch</li>
       </ul>
-      <a href="https://chirp2-sable.vercel.app" class="price-btn price-btn-free">Get started free</a>
+      <a href="#beta" class="price-btn price-btn-free">Request beta access</a>
     </div>
     <div class="price-card featured">
       <div class="price-plan">Family</div>
@@ -469,18 +488,55 @@
         <li>Trends + history</li>
         <li class="soon">iOS enforcement (coming soon)</li>
       </ul>
-      <a href="https://chirp2-sable.vercel.app" class="price-btn price-btn-paid">Join beta free →</a>
+      <a href="#beta" class="price-btn price-btn-paid">Join beta free →</a>
     </div>
   </div>
 </section>
 
-<section style="padding: 20px 24px 80px;">
-  <div class="cta-section">
+<!-- Beta signup form -->
+<section id="beta" style="padding: 20px 24px 80px;">
+  <div class="beta-section">
     <h2>Your kids will do chores.<br>We promise. 🐦</h2>
-    <p>Join our beta and help shape the app before it launches on the App Store. Free for early families.</p>
-    <div class="cta-actions">
-      <a href="https://chirp2-sable.vercel.app" class="btn-white">🐦 Try Chirp Free</a>
-      <a href="mailto:hello@chirp-kids.com" class="btn-ghost">Contact us</a>
+    <p>Chirp is coming to the App Store. Join our beta and help shape the app before launch — free for early families.</p>
+
+    <div class="beta-form">
+      <div class="form-error" id="formError"></div>
+      <div id="formContent">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your name</label>
+            <input type="text" id="fieldName" placeholder="Jane Smith" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="fieldEmail" placeholder="jane@email.com" autocomplete="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Apple ID email <span>(for your TestFlight invite)</span></label>
+          <input type="email" id="fieldAppleId" placeholder="jane@icloud.com" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label>Do you have a Nintendo Switch?</label>
+          <select id="fieldSwitch">
+            <option value="">Select one</option>
+            <option value="yes_kids">Yes — my kids use it</option>
+            <option value="yes_no_kids">Yes — but not much</option>
+            <option value="no">No Nintendo Switch</option>
+          </select>
+        </div>
+        <button class="form-submit" id="formSubmit" onclick="submitBetaForm()">🐦 Request Beta Access</button>
+        <p class="form-note">We'll send your TestFlight invite to your Apple ID. Usually within a day or two.</p>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">🎉</div>
+        <h3>You're on the list!</h3>
+        <p>We'll send your TestFlight invite to your Apple ID shortly. Keep an eye on your email — and thank you for being an early family.</p>
+      </div>
+    </div>
+
+    <div class="cta-contact">
+      <a href="mailto:hello@chirp-kids.com">Questions? hello@chirp-kids.com</a>
     </div>
   </div>
 </section>
@@ -496,6 +552,64 @@
   </div>
   <div class="footer-copy">© 2026 Geddes Ventures LLC · Made with ☕ and stubbornness</div>
 </footer>
+
+<script>
+  async function submitBetaForm() {
+    const btn = document.getElementById('formSubmit');
+    const errorEl = document.getElementById('formError');
+
+    const name = document.getElementById('fieldName').value.trim();
+    const email = document.getElementById('fieldEmail').value.trim();
+    const appleId = document.getElementById('fieldAppleId').value.trim();
+    const hasSwitch = document.getElementById('fieldSwitch').value;
+
+    errorEl.style.display = 'none';
+
+    if (!name || !email || !appleId || !hasSwitch) {
+      errorEl.textContent = 'Please fill in all fields.';
+      errorEl.style.display = 'block';
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errorEl.textContent = 'Please enter a valid email address.';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+
+    try {
+      const res = await fetch('https://iakmfeekvwtuzydvxkps.supabase.co/rest/v1/beta_signups', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlha21mZWVrdnd0dXp5ZHZ4a3BzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI3NTUxMDEsImV4cCI6MjA4ODMzMTEwMX0.feA9IuMFve-Z3R1ilbORBI-Q1Nun8BzwdXoWn_fmp7U',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlha21mZWVrdnd0dXp5ZHZ4a3BzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI3NTUxMDEsImV4cCI6MjA4ODMzMTEwMX0.feA9IuMFve-Z3R1ilbORBI-Q1Nun8BzwdXoWn_fmp7U',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          apple_id: appleId,
+          has_switch: hasSwitch,
+          submitted_at: new Date().toISOString()
+        })
+      });
+
+      if (!res.ok) throw new Error('Submit failed');
+
+      document.getElementById('formContent').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+
+    } catch (err) {
+      errorEl.textContent = 'Something went wrong — please email us directly at hello@chirp-kids.com';
+      errorEl.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = '🐦 Request Beta Access';
+    }
+  }
+</script>
 
 </body>
 </html>
