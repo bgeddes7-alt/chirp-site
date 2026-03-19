@@ -8,6 +8,7 @@
 <meta property="og:title" content="Chirp — Earn Your Screen Time">
 <meta property="og:description" content="Kids earn screen time by completing tasks. Parents approve. Everyone wins.">
 <meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐦</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -91,6 +92,13 @@
   .k-task-btn { background: var(--orange); color: white; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 10px; padding: 5px 9px; border-radius: 8px; }
   .k-task.done { border-color: var(--green); opacity: 0.7; }
   .k-task.done .k-task-btn { background: var(--green); }
+
+  /* Demo video section */
+  .video-section { padding: 0 24px 80px; max-width: 800px; margin: 0 auto; text-align: center; }
+  .video-label { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--indigo); margin-bottom: 12px; }
+  .video-title { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(24px, 4vw, 36px); letter-spacing: -1px; line-height: 1.1; color: var(--navy); margin-bottom: 28px; }
+  .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 24px; box-shadow: 0 24px 80px rgba(30,27,75,0.15), 0 0 0 1px var(--border); }
+  .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 24px; }
 
   section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
   .section-label { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--indigo); margin-bottom: 12px; }
@@ -211,13 +219,10 @@
 </nav>
 
 <div class="hero">
-  <!-- FIXED: was "Now available on iOS" — app is not on the App Store yet -->
   <div class="hero-badge">🐦 Now in beta — join early families</div>
   <h1>Screen time kids actually <span class="accent2">earn.</span></h1>
-  <!-- FIXED: removed "phone, iPad" enforcement — only Nintendo Switch enforcement is live -->
   <p class="hero-sub">Set tasks. Kids complete them. Screen time unlocks — and enforces automatically on Nintendo Switch. No more fights.</p>
   <div class="hero-actions">
-    <!-- FIXED: was "⬇ Download Free" — no App Store listing, this is a PWA -->
     <a href="https://chirp2-sable.vercel.app" class="btn-primary">🐦 Try Chirp Free</a>
     <a href="#how" class="btn-secondary">See how it works</a>
   </div>
@@ -289,6 +294,20 @@
   </div>
 </div>
 
+<!-- Demo video -->
+<div class="video-section">
+  <div class="video-label">See it in action</div>
+  <div class="video-title">Watch how Chirp works for real families.</div>
+  <div class="video-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/cloj4-vktqc"
+      title="Chirp — Earn Your Screen Time (App Demo)"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
 <section id="how">
   <div class="section-label">How it works</div>
   <div class="section-title">Simple for parents.<br>Fun for kids.</div>
@@ -307,7 +326,6 @@
     <div class="how-card">
       <div class="how-step">3</div>
       <h3>Screen time unlocks</h3>
-      <!-- FIXED: removed "automatically on their device" — only Switch enforces right now -->
       <p>Parent approves with one tap. Earned minutes go to the bank. Kids start a timer — with automatic Nintendo Switch enforcement built in.</p>
     </div>
   </div>
@@ -317,7 +335,6 @@
   <div class="enforcement">
     <div>
       <div class="section-label">Real enforcement</div>
-      <!-- FIXED: was "Not the honor system" with claim iPhone/iPad also enforced -->
       <div class="section-title">Not just the honor system.</div>
       <p class="section-sub">Chirp connects directly to Nintendo Switch parental controls. When kids start a timer, their Switch daily limit increases automatically. When time runs out, it resets — no nagging required.</p>
       <div class="platform-list">
@@ -325,12 +342,10 @@
           <div class="platform-emoji">🎮</div>
           <div class="platform-info">
             <div class="platform-name">Nintendo Switch</div>
-            <!-- FIXED: was "Earns bonus time via parental controls" — now accurately describes the mechanism -->
             <div class="platform-desc">Raises daily play limit automatically · resets when time is up</div>
           </div>
           <div class="platform-status status-live">Live ✓</div>
         </div>
-        <!-- FIXED: iPhone/iPad was falsely "Live" — now "Coming soon" -->
         <div class="platform-item">
           <div class="platform-emoji">📱</div>
           <div class="platform-info">
@@ -360,13 +375,11 @@
         <div class="enf-step-text">Parent gets push notification, approves in 1 tap ✓</div>
       </div>
       <div class="enf-arrow">↓</div>
-      <!-- FIXED: was "Roblox & YouTube unlock on Emma's iPad" — iPad enforcement not built -->
       <div class="enf-step">
         <div class="enf-step-num">3</div>
         <div class="enf-step-text">Emma starts timer — Switch daily limit raises by 30 min 🎮</div>
       </div>
       <div class="enf-arrow">↓</div>
-      <!-- FIXED: was "apps lock automatically" — only Switch locks -->
       <div class="enf-step">
         <div class="enf-step-num">4</div>
         <div class="enf-step-text">Timer ends — Switch limit resets automatically 🔒</div>
@@ -411,14 +424,13 @@
       <span class="feat-icon">🔔</span>
       <h4>Push notifications</h4>
       <p>Parents notified the moment a task is submitted. Kids notified the moment it's approved.</p>
-      <span class="feat-badge green">Real-time</span>
+      <span class="feat-badge blue">Coming soon</span>
     </div>
   </div>
 </section>
 
 <section id="pricing" style="text-align: center;">
   <div class="section-label">Pricing</div>
-  <!-- FIXED: pricing section now honest about beta status -->
   <div class="section-title">Free during beta.</div>
   <p class="section-sub" style="margin: 0 auto;">All features are free while we're in early access. Pricing below reflects our post-launch plans.</p>
 
@@ -455,7 +467,6 @@
         <li>Nintendo Switch integration</li>
         <li>Sibling gifting</li>
         <li>Trends + history</li>
-        <!-- FIXED: was listed as a live feature, now correctly marked coming soon -->
         <li class="soon">iOS enforcement (coming soon)</li>
       </ul>
       <a href="https://chirp2-sable.vercel.app" class="price-btn price-btn-paid">Join beta free →</a>
@@ -466,10 +477,8 @@
 <section style="padding: 20px 24px 80px;">
   <div class="cta-section">
     <h2>Your kids will do chores.<br>We promise. 🐦</h2>
-    <!-- FIXED: was "Join thousands of families" — currently 0 beta families -->
     <p>Join our beta and help shape the app before it launches on the App Store. Free for early families.</p>
     <div class="cta-actions">
-      <!-- FIXED: was "⬇ Download for iPhone" (no App Store) and "Try the web demo" (broken #) -->
       <a href="https://chirp2-sable.vercel.app" class="btn-white">🐦 Try Chirp Free</a>
       <a href="mailto:hello@chirp-kids.com" class="btn-ghost">Contact us</a>
     </div>
@@ -480,7 +489,6 @@
   <div class="footer-logo">chirp<span>.</span></div>
   <div class="footer-tagline">Earn your screen time.</div>
   <div class="footer-links">
-    <!-- FIXED: all footer links were "#" — now point to real pages -->
     <a href="/privacy.html" class="footer-link">Privacy Policy</a>
     <a href="/terms.html" class="footer-link">Terms of Service</a>
     <a href="mailto:hello@chirp-kids.com" class="footer-link">Contact</a>
