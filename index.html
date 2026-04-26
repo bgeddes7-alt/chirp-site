@@ -3,15 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chirp — Earn Your Screen Time</title>
-<meta name="description" content="Kids earn screen time by completing tasks. Parents approve. Everyone wins. The screen time app your whole family will actually use.">
+<meta name="theme-color" content="#5b5ef4">
+
+<title>Chirp — Earn Your Screen Time | Family Task & Reward App</title>
+<meta name="description" content="Kids earn screen time by completing parent-assigned tasks with photo proof. Built-in Nintendo Switch enforcement. Coming soon to iOS.">
+
+<link rel="canonical" href="https://chirp-kids.com/">
+
+<!-- Open Graph -->
 <meta property="og:title" content="Chirp — Earn Your Screen Time">
-<meta property="og:description" content="Kids earn screen time by completing tasks. Parents approve. Everyone wins.">
+<meta property="og:description" content="Kids earn screen time by completing parent-assigned tasks. Built-in Nintendo Switch enforcement. Coming soon to iOS.">
+<meta property="og:url" content="https://chirp-kids.com/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Chirp">
+<meta property="og:image" content="https://chirp-kids.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chirp — Earn Your Screen Time. Family task and reward app.">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chirp — Earn Your Screen Time">
+<meta name="twitter:description" content="Kids earn screen time by completing parent-assigned tasks. Built-in Nintendo Switch enforcement.">
+<meta name="twitter:image" content="https://chirp-kids.com/og-image.png">
+<meta name="twitter:image:alt" content="Chirp — Earn Your Screen Time">
+
+<!-- Apple touch icon -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Favicon -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐦</text></svg>">
+
+<!-- Fonts (trimmed weights for performance) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Structured data: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Chirp",
+  "applicationCategory": "LifestyleApplication",
+  "applicationSubCategory": "Family",
+  "operatingSystem": "iOS 16+",
+  "description": "Family task and reward app. Kids earn screen time by completing parent-assigned tasks with photo proof. Built-in Nintendo Switch enforcement automatically extends daily play limits when time is earned.",
+  "url": "https://chirp-kids.com/",
+  "image": "https://chirp-kids.com/og-image.png",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Free",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "1 child, 5 active tasks, manual approval, timer and balance tracking"
+    },
+    {
+      "@type": "Offer",
+      "name": "Family",
+      "price": "4.99",
+      "priceCurrency": "USD",
+      "description": "Up to 5 children, unlimited tasks, Nintendo Switch integration, push notifications, leaderboards, streaks, sibling gifting, trends. Annual plan available at $39.99/year."
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Geddes Ventures LLC",
+    "url": "https://chirp-kids.com/"
+  }
+}
+</script>
+
+<!-- Structured data: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Geddes Ventures LLC",
+  "url": "https://chirp-kids.com/",
+  "email": "hello@chirp-kids.com",
+  "founder": {
+    "@type": "Person",
+    "name": "Brian Geddes"
+  }
+}
+</script>
+
+<!-- Structured data: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Chirp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chirp is a family task and reward app where kids earn screen time and other rewards by completing parent-assigned tasks. Parents create tasks with assigned reward minutes, kids submit completed tasks with photo proof, parents approve, and earned time can be redeemed across supported platforms — including automatic Nintendo Switch enforcement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Chirp work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Parents set up tasks (chores, homework, reading, anything) with screen-time minute rewards. Kids see their tasks on their own screen, complete them, and submit with a photo. Parents get a push notification, approve in one tap, and the earned minutes go into the child's balance. Kids start a timer to use their earned time, and on Nintendo Switch the daily play limit is raised and reset automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Nintendo Switch enforcement work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chirp connects directly to Nintendo's Parental Controls API. When a child starts a Chirp timer, their Switch daily play limit is increased by the earned amount. When the timer ends, the limit resets automatically. No nagging, no honor system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What ages is Chirp designed for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chirp is built for families with kids roughly ages 5 to 14. Younger kids handle simple tasks with parent help, older kids manage their own task lists and balances. The kid-facing screens are designed to be readable and motivating for early elementary readers and up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Chirp free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chirp has a free tier that includes 1 child, 5 active tasks, manual task approval, and basic balance tracking. The Family plan unlocks up to 5 children, unlimited tasks, Nintendo Switch integration, push notifications, leaderboards, streaks, sibling gifting, and trends."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What devices does Chirp support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chirp is launching on iOS for iPhone and iPad. Android support is planned. Nintendo Switch enforcement works regardless of which phone the parent uses, since it talks directly to Nintendo's parental controls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When will Chirp be available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chirp is in active TestFlight beta and preparing for App Store launch. Follow updates on the App Store listing once it goes live."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is my family's data protected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chirp does not sell or share family data with advertisers. Photo submissions are stored in row-level-security-protected storage so only your family can access them. Full details are in our Privacy Policy."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
   :root {
     --indigo: #5b5ef4; --indigo-dark: #4a4dd4; --indigo-light: #ededfd;
@@ -39,7 +191,7 @@
   .nav-cta:hover { background: var(--indigo-dark) !important; transform: translateY(-1px); }
 
   .hero { padding: 120px 24px 80px; text-align: center; max-width: 720px; margin: 0 auto; }
-  .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--orange-light); color: var(--orange); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px; padding: 6px 14px; border-radius: 100px; margin-bottom: 28px; animation: fadeUp 0.5s ease both; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--indigo-light); color: var(--indigo); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px; padding: 6px 14px; border-radius: 100px; margin-bottom: 28px; animation: fadeUp 0.5s ease both; }
   .hero h1 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(42px, 8vw, 72px); line-height: 1.05; letter-spacing: -2px; color: var(--navy); margin-bottom: 20px; animation: fadeUp 0.5s 0.1s ease both; }
   .hero h1 .accent { color: var(--indigo); }
   .hero h1 .accent2 { color: var(--orange); }
@@ -137,7 +289,7 @@
   .platform-name { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; color: white; }
   .platform-desc { font-size: 13px; color: rgba(255,255,255,0.5); }
   .platform-status { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 11px; padding: 4px 10px; border-radius: 8px; white-space: nowrap; }
-  .status-live { background: rgba(34,197,94,0.2); color: #4ade80; }
+  .status-built { background: rgba(34,197,94,0.2); color: #4ade80; }
   .status-soon { background: rgba(91,94,244,0.2); color: #a5b4fc; }
   .enforcement-visual { display: flex; flex-direction: column; gap: 14px; }
   .enf-step { background: rgba(255,255,255,0.06); border-radius: 16px; padding: 16px 18px; display: flex; align-items: center; gap: 12px; border: 1px solid rgba(255,255,255,0.08); }
@@ -161,39 +313,28 @@
   .price-features li.muted { color: var(--muted); }
   .price-features li.muted::before { content: '–'; color: var(--border); }
   .price-features li.soon::before { content: '🔜'; font-size: 11px; }
-  .price-btn { width: 100%; padding: 14px; border-radius: 14px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; cursor: pointer; border: none; transition: all 0.2s; text-decoration: none; display: block; text-align: center; }
-  .price-btn-free { background: var(--bg); color: var(--text); border: 2px solid var(--border); }
-  .price-btn-free:hover { border-color: var(--indigo); color: var(--indigo); }
-  .price-btn-paid { background: var(--indigo); color: white; box-shadow: 0 4px 16px rgba(91,94,244,0.3); }
-  .price-btn-paid:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+  .price-btn { width: 100%; padding: 14px; border-radius: 14px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; cursor: default; border: none; transition: all 0.2s; text-decoration: none; display: block; text-align: center; }
+  .price-btn-free { background: var(--bg); color: var(--muted); border: 2px solid var(--border); }
+  .price-btn-paid { background: var(--indigo-light); color: var(--indigo); border: 2px solid var(--indigo-light); }
 
-  .beta-section { background: linear-gradient(135deg, var(--indigo) 0%, var(--purple) 100%); border-radius: 32px; padding: 64px 48px; text-align: center; color: white; max-width: 800px; margin: 0 auto 80px; position: relative; overflow: hidden; }
-  .beta-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: rgba(255,255,255,0.06); border-radius: 50%; pointer-events: none; }
-  .beta-section::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 300px; height: 300px; background: rgba(255,255,255,0.04); border-radius: 50%; pointer-events: none; }
-  .beta-section h2 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(26px, 5vw, 40px); letter-spacing: -1.5px; margin-bottom: 12px; position: relative; }
-  .beta-section > p { font-size: 16px; opacity: 0.8; margin-bottom: 36px; position: relative; max-width: 480px; margin-left: auto; margin-right: auto; }
-  .beta-form { background: white; border-radius: 24px; padding: 32px; max-width: 520px; margin: 0 auto; position: relative; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
-  .form-group label { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; color: var(--text); text-align: left; }
-  .form-group label span { color: var(--muted); font-weight: 600; }
-  .form-group input, .form-group select { padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 12px; font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--text); background: var(--bg); transition: border-color 0.15s; outline: none; width: 100%; }
-  .form-group input:focus, .form-group select:focus { border-color: var(--indigo); background: white; }
-  .form-group input::placeholder { color: var(--muted); }
-  .form-submit { width: 100%; padding: 15px; border-radius: 14px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; cursor: pointer; border: none; background: var(--indigo); color: white; box-shadow: 0 4px 16px rgba(91,94,244,0.3); transition: all 0.2s; margin-top: 8px; }
-  .form-submit:hover { background: var(--indigo-dark); transform: translateY(-1px); }
-  .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-  .form-note { font-size: 12px; color: var(--muted); margin-top: 12px; text-align: center; }
-  .form-success { display: none; text-align: center; padding: 8px 0; }
-  .form-success-icon { font-size: 48px; margin-bottom: 12px; }
-  .form-success h3 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 22px; color: var(--navy); margin-bottom: 8px; }
-  .form-success p { font-size: 14px; color: var(--muted); line-height: 1.5; }
-  .form-error { display: none; background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 10px; padding: 10px 14px; font-size: 13px; color: #dc2626; margin-bottom: 12px; text-align: left; }
-  .beta-banner { background: linear-gradient(135deg, #fef3c7, #fde68a); border: 1.5px solid #fcd34d; border-radius: 16px; padding: 14px 20px; margin: 0 auto 48px; max-width: 700px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #92400e; line-height: 1.5; }
-  .beta-banner strong { font-family: 'Nunito', sans-serif; font-weight: 800; }
-  .cta-contact { text-align: center; margin-top: 20px; position: relative; }
-  .cta-contact a { color: rgba(255,255,255,0.6); font-size: 13px; text-decoration: none; transition: color 0.15s; }
-  .cta-contact a:hover { color: white; }
+  .faq-list { max-width: 760px; margin: 48px auto 0; }
+  .faq-item { background: white; border: 1.5px solid var(--border); border-radius: 18px; margin-bottom: 12px; overflow: hidden; transition: border-color 0.15s; }
+  .faq-item[open] { border-color: var(--indigo); }
+  .faq-item summary { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; color: var(--navy); padding: 18px 22px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 22px; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; }
+  .faq-item[open] summary::after { transform: rotate(45deg); color: var(--indigo); }
+  .faq-item p { padding: 0 22px 20px; font-size: 15px; color: var(--muted); line-height: 1.65; }
+
+  .launch-section { background: linear-gradient(135deg, var(--indigo) 0%, var(--purple) 100%); border-radius: 32px; padding: 64px 48px; text-align: center; color: white; max-width: 800px; margin: 0 auto 80px; position: relative; overflow: hidden; }
+  .launch-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: rgba(255,255,255,0.06); border-radius: 50%; pointer-events: none; }
+  .launch-section::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 300px; height: 300px; background: rgba(255,255,255,0.04); border-radius: 50%; pointer-events: none; }
+  .launch-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.15); color: white; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; padding: 6px 14px; border-radius: 100px; margin-bottom: 20px; position: relative; letter-spacing: 0.5px; text-transform: uppercase; }
+  .launch-section h2 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(26px, 5vw, 40px); letter-spacing: -1.5px; margin-bottom: 12px; position: relative; }
+  .launch-section > p { font-size: 16px; opacity: 0.85; margin-bottom: 8px; position: relative; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.55; }
+  .launch-contact { margin-top: 28px; position: relative; }
+  .launch-contact a { color: white; font-size: 14px; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); text-underline-offset: 4px; transition: text-decoration-color 0.15s; }
+  .launch-contact a:hover { text-decoration-color: white; }
 
   footer { background: var(--navy); color: rgba(255,255,255,0.5); padding: 48px 24px 32px; text-align: center; }
   .footer-logo { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 24px; color: white; margin-bottom: 8px; }
@@ -210,43 +351,46 @@
   .phone:nth-child(1) { animation: float 4s ease-in-out infinite; }
   .phone:nth-child(2) { animation: float2 4.5s ease-in-out infinite; }
   .phone:hover { animation: none !important; }
+  @media (prefers-reduced-motion: reduce) {
+    .phone:nth-child(1), .phone:nth-child(2) { animation: none; }
+    html { scroll-behavior: auto; }
+  }
 
   @media (max-width: 600px) {
     nav .nav-links .nav-link:not(.nav-cta) { display: none; }
     .mockup-section { gap: 12px; }
     .phone { width: 200px; max-width: 200px; }
     .phone:nth-child(2) { display: none; }
-    .beta-section { padding: 40px 20px; border-radius: 24px; }
-    .beta-form { padding: 24px 20px; }
-    .form-row { grid-template-columns: 1fr; }
+    .launch-section { padding: 40px 24px; border-radius: 24px; }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">chirp<span>.</span></a>
+  <a href="#" class="nav-logo" aria-label="Chirp home">chirp<span>.</span></a>
   <div class="nav-links">
     <a href="#how" class="nav-link">How it works</a>
     <a href="#features" class="nav-link">Features</a>
     <a href="#pricing" class="nav-link">Pricing</a>
-    <a href="APP_STORE_LINK_HERE" class="nav-link nav-cta">Download Free</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+    <a href="#launch" class="nav-link nav-cta">Launching soon</a>
   </div>
 </nav>
 
-<div class="hero">
-  <div class="hero-badge">🍎 Now on the App Store</div>
+<header class="hero">
+  <div class="hero-badge">🚀 Launching soon on iOS</div>
   <h1>Screen time kids actually <span class="accent2">earn.</span></h1>
-  <p class="hero-sub">Set tasks. Kids complete them. Screen time unlocks — and enforces automatically on Nintendo Switch. No more fights.</p>
+  <p class="hero-sub">Set tasks. Kids complete them with photo proof. Screen time unlocks — and enforces automatically on Nintendo Switch. No more fights.</p>
   <div class="hero-actions">
-    <a href="APP_STORE_LINK_HERE" class="btn-primary">🐦 Download Free</a>
-    <a href="#how" class="btn-secondary">See how it works</a>
+    <a href="#how" class="btn-primary">See how it works</a>
+    <a href="#features" class="btn-secondary">Explore features</a>
   </div>
-  <p class="hero-note">Free to download · No credit card required · iOS</p>
-</div>
+  <p class="hero-note">Coming soon to iPhone &amp; iPad · iOS 16+</p>
+</header>
 
-<div class="mockup-section">
-  <div class="phone">
+<div class="mockup-section" aria-label="App preview">
+  <div class="phone" aria-hidden="true">
     <div class="phone-notch"></div>
     <div class="phone-screen">
       <div class="p-screen">
@@ -281,7 +425,7 @@
     </div>
   </div>
 
-  <div class="phone">
+  <div class="phone" aria-hidden="true">
     <div class="phone-notch"></div>
     <div class="phone-screen">
       <div class="k-screen">
@@ -312,11 +456,12 @@
 
 <div class="video-section">
   <div class="video-label">See it in action</div>
-  <div class="video-title">Watch how Chirp works for real families.</div>
+  <h2 class="video-title">Watch how Chirp works for real families.</h2>
   <div class="video-wrapper">
     <iframe
       src="https://www.youtube.com/embed/cloj4-vktqc"
       title="Chirp — Earn Your Screen Time (App Demo)"
+      loading="lazy"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
@@ -325,32 +470,32 @@
 
 <section id="how">
   <div class="section-label">How it works</div>
-  <div class="section-title">Simple for parents.<br>Fun for kids.</div>
+  <h2 class="section-title">Simple for parents.<br>Fun for kids.</h2>
   <p class="section-sub">Set it up in 5 minutes. Kids are motivated to help around the house. Parents stop being the bad guys.</p>
   <div class="how-grid">
-    <div class="how-card">
+    <article class="how-card">
       <div class="how-step">1</div>
       <h3>Parents set tasks</h3>
       <p>Create a list of tasks — chores, homework, reading, anything. Assign minutes as rewards. Takes 2 minutes to set up.</p>
-    </div>
-    <div class="how-card">
+    </article>
+    <article class="how-card">
       <div class="how-step">2</div>
-      <h3>Kids complete & submit</h3>
+      <h3>Kids complete &amp; submit</h3>
       <p>Kids see their tasks on their own screen, mark them done, and tap submit. They can track their balance in real time.</p>
-    </div>
-    <div class="how-card">
+    </article>
+    <article class="how-card">
       <div class="how-step">3</div>
       <h3>Screen time unlocks</h3>
       <p>Parent approves with one tap. Earned minutes go to the bank. Kids start a timer — with automatic Nintendo Switch enforcement built in.</p>
-    </div>
+    </article>
   </div>
 </section>
 
-<section style="padding: 0 24px 80px; max-width: 1100px; margin: 0 auto;">
+<section style="padding: 0 24px 80px; max-width: 1100px; margin: 0 auto;" aria-labelledby="enforcement-heading">
   <div class="enforcement">
     <div>
       <div class="section-label">Real enforcement</div>
-      <div class="section-title">Not just the honor system.</div>
+      <h2 id="enforcement-heading" class="section-title">Not just the honor system.</h2>
       <p class="section-sub">Chirp connects directly to Nintendo Switch parental controls. When kids start a timer, their Switch daily limit increases automatically. When time runs out, it resets — no nagging required.</p>
       <div class="platform-list">
         <div class="platform-item">
@@ -359,12 +504,12 @@
             <div class="platform-name">Nintendo Switch</div>
             <div class="platform-desc">Raises daily play limit automatically · resets when time is up</div>
           </div>
-          <div class="platform-status status-live">Live ✓</div>
+          <div class="platform-status status-built">Built ✓</div>
         </div>
         <div class="platform-item">
           <div class="platform-emoji">📱</div>
           <div class="platform-info">
-            <div class="platform-name">iPhone & iPad</div>
+            <div class="platform-name">iPhone &amp; iPad</div>
             <div class="platform-desc">Apple FamilyControls — OS-level app enforcement</div>
           </div>
           <div class="platform-status status-soon">Coming soon</div>
@@ -379,7 +524,7 @@
         </div>
       </div>
     </div>
-    <div class="enforcement-visual">
+    <div class="enforcement-visual" aria-hidden="true">
       <div class="enf-step">
         <div class="enf-step-num">1</div>
         <div class="enf-step-text">Emma finishes "Clean bedroom" 🧹</div>
@@ -405,50 +550,49 @@
 
 <section id="features">
   <div class="section-label">Features</div>
-  <div class="section-title">Everything your family needs.</div>
+  <h2 class="section-title">Everything your family needs.</h2>
   <p class="section-sub">Built for real families. Designed so kids actually want to use it.</p>
   <div class="features-grid">
-    <div class="feat-card">
-      <span class="feat-icon">👨‍👩‍👧‍👦</span>
-      <h4>Multiple kids</h4>
+    <article class="feat-card">
+      <span class="feat-icon" aria-hidden="true">👨‍👩‍👧‍👦</span>
+      <h3>Multiple kids</h3>
       <p>Manage every child independently. Different tasks, different balances, different rules.</p>
-    </div>
-    <div class="feat-card">
-      <span class="feat-icon">🏆</span>
-      <h4>Family leaderboard</h4>
+    </article>
+    <article class="feat-card">
+      <span class="feat-icon" aria-hidden="true">🏆</span>
+      <h3>Family leaderboard</h3>
       <p>Kids see who's earned the most this week. Friendly competition drives more chores getting done.</p>
       <span class="feat-badge blue">Kids love this</span>
-    </div>
-    <div class="feat-card">
-      <span class="feat-icon">🔥</span>
-      <h4>Streaks</h4>
+    </article>
+    <article class="feat-card">
+      <span class="feat-icon" aria-hidden="true">🔥</span>
+      <h3>Streaks</h3>
       <p>Daily task streaks keep kids consistent. Missing a day breaks the streak — powerful motivation.</p>
-    </div>
-    <div class="feat-card">
-      <span class="feat-icon">🎁</span>
-      <h4>Sibling gifting</h4>
+    </article>
+    <article class="feat-card">
+      <span class="feat-icon" aria-hidden="true">🎁</span>
+      <h3>Sibling gifting</h3>
       <p>Kids can gift earned minutes to each other. Builds generosity. Parents love watching this happen.</p>
       <span class="feat-badge">Unique to Chirp</span>
-    </div>
-    <div class="feat-card">
-      <span class="feat-icon">📊</span>
-      <h4>Trends & history</h4>
+    </article>
+    <article class="feat-card">
+      <span class="feat-icon" aria-hidden="true">📊</span>
+      <h3>Trends &amp; history</h3>
       <p>See which tasks get done, which don't, and how screen time patterns change over time.</p>
-    </div>
-    <div class="feat-card">
-      <span class="feat-icon">🔔</span>
-      <h4>Push notifications</h4>
+    </article>
+    <article class="feat-card">
+      <span class="feat-icon" aria-hidden="true">🔔</span>
+      <h3>Push notifications</h3>
       <p>Parents notified the moment a task is submitted. Approve from your lock screen in one tap.</p>
-      <span class="feat-badge green">Live ✓</span>
-    </div>
+      <span class="feat-badge green">Built ✓</span>
+    </article>
   </div>
 </section>
 
 <section id="pricing" style="text-align: center;">
   <div class="section-label">Pricing</div>
-  <div class="section-title">Free to start. Upgrade when you're ready.</div>
+  <h2 class="section-title">Free to start. Upgrade when you're ready.</h2>
   <p class="section-sub" style="margin: 0 auto;">Start free with one child. Upgrade to Family for unlimited kids, Nintendo Switch, and push notifications.</p>
-
 
   <div class="pricing-grid">
     <div class="price-card">
@@ -464,7 +608,7 @@
         <li class="muted">Push notifications</li>
         <li class="muted">Nintendo Switch</li>
       </ul>
-      <a href="APP_STORE_LINK_HERE" class="price-btn price-btn-free">Download Free</a>
+      <span class="price-btn price-btn-free">Available at launch</span>
     </div>
     <div class="price-card featured">
       <div class="price-plan">Family</div>
@@ -480,24 +624,58 @@
         <li>Trends + history</li>
         <li class="soon">iOS enforcement (coming soon)</li>
       </ul>
-      <a href="APP_STORE_LINK_HERE" class="price-btn price-btn-paid">Download Free →</a>
+      <span class="price-btn price-btn-paid">Available at launch</span>
     </div>
   </div>
 </section>
 
-<section id="download" style="padding: 20px 24px 80px;">
-  <div class="beta-section">
-    <h2>Your kids will do chores.<br>We promise. 🐦</h2>
-    <p>Free to download. Set up in 5 minutes. Your family will wonder how you managed screen time without it.</p>
-    <div style="position:relative; margin-top: 8px;">
-      <a href="APP_STORE_LINK_HERE" style="display:inline-flex; align-items:center; gap:10px; background:white; color:#1a1d2e; font-family:'Nunito',sans-serif; font-weight:900; font-size:17px; padding:16px 32px; border-radius:18px; text-decoration:none; box-shadow:0 8px 32px rgba(0,0,0,0.2); transition:all 0.2s;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        Download on the App Store
-      </a>
-      <p style="font-size:13px; opacity:0.6; margin-top:16px; position:relative;">Free · iOS 16+ · iPhone &amp; iPad</p>
-    </div>
-    <div class="cta-contact">
-      <a href="mailto:hello@chirp-kids.com">Questions? hello@chirp-kids.com</a>
+<section id="faq">
+  <div class="section-label">Common questions</div>
+  <h2 class="section-title">Answers, before you ask.</h2>
+  <p class="section-sub">Everything parents typically want to know about Chirp.</p>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>What is Chirp?</summary>
+      <p>Chirp is a family task and reward app where kids earn screen time and other rewards by completing parent-assigned tasks. Parents create tasks with assigned reward minutes, kids submit completed tasks with photo proof, parents approve, and earned time can be redeemed across supported platforms — including automatic Nintendo Switch enforcement.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How does Chirp work?</summary>
+      <p>Parents set up tasks (chores, homework, reading, anything) with screen-time minute rewards. Kids see their tasks on their own screen, complete them, and submit with a photo. Parents get a push notification, approve in one tap, and the earned minutes go into the child's balance. Kids start a timer to use their earned time, and on Nintendo Switch the daily play limit is raised and reset automatically.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How does Nintendo Switch enforcement work?</summary>
+      <p>Chirp connects directly to Nintendo's Parental Controls API. When a child starts a Chirp timer, their Switch daily play limit is increased by the earned amount. When the timer ends, the limit resets automatically. No nagging, no honor system.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What ages is Chirp designed for?</summary>
+      <p>Chirp is built for families with kids roughly ages 5 to 14. Younger kids handle simple tasks with parent help, older kids manage their own task lists and balances. The kid-facing screens are designed to be readable and motivating for early elementary readers and up.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is Chirp free?</summary>
+      <p>Chirp has a free tier that includes 1 child, 5 active tasks, manual task approval, and basic balance tracking. The Family plan unlocks up to 5 children, unlimited tasks, Nintendo Switch integration, push notifications, leaderboards, streaks, sibling gifting, and trends.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What devices does Chirp support?</summary>
+      <p>Chirp is launching on iOS for iPhone and iPad (iOS 16+). Android support is planned. Nintendo Switch enforcement works regardless of which phone the parent uses, since it talks directly to Nintendo's parental controls.</p>
+    </details>
+    <details class="faq-item">
+      <summary>When will Chirp be available?</summary>
+      <p>Chirp is in active TestFlight beta and preparing for App Store launch. Once the listing is live, this site will link directly to it.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How is my family's data protected?</summary>
+      <p>Chirp does not sell or share family data with advertisers. Photo submissions are stored in row-level-security-protected storage so only your family can access them. Full details are in our <a href="/privacy.html" style="color: var(--indigo); font-weight: 600;">Privacy Policy</a>.</p>
+    </details>
+  </div>
+</section>
+
+<section id="launch" style="padding: 20px 24px 80px;">
+  <div class="launch-section">
+    <div class="launch-badge">🚀 Launching soon</div>
+    <h2>Coming to the App Store.</h2>
+    <p>Chirp is finishing TestFlight beta and preparing for App Store launch. The fastest way to know when we go live is to follow us on social.</p>
+    <div class="launch-contact">
+      <a href="mailto:hello@chirp-kids.com">Have questions? hello@chirp-kids.com</a>
     </div>
   </div>
 </section>
@@ -505,74 +683,14 @@
 <footer>
   <div class="footer-logo">chirp<span>.</span></div>
   <div class="footer-tagline">Earn your screen time.</div>
-  <div class="footer-links">
+  <nav class="footer-links" aria-label="Footer">
     <a href="/privacy.html" class="footer-link">Privacy Policy</a>
     <a href="/terms.html" class="footer-link">Terms of Service</a>
     <a href="mailto:hello@chirp-kids.com" class="footer-link">Contact</a>
     <a href="mailto:hello@chirp-kids.com" class="footer-link">Support</a>
-  </div>
+  </nav>
   <div class="footer-copy">© 2026 Geddes Ventures LLC · Made with ☕ and stubbornness</div>
 </footer>
-
-<script>
-  // Beta signup form removed — app is live on App Store
-  // submitBetaForm() deprecated
-  function submitBetaForm() {
-    const btn = document.getElementById('formSubmit');
-    const errorEl = document.getElementById('formError');
-
-    const name = document.getElementById('fieldName').value.trim();
-    const email = document.getElementById('fieldEmail').value.trim();
-    const appleId = document.getElementById('fieldAppleId').value.trim();
-    const hasSwitch = document.getElementById('fieldSwitch').value;
-
-    errorEl.style.display = 'none';
-
-    if (!name || !email || !appleId || !hasSwitch) {
-      errorEl.textContent = 'Please fill in all fields.';
-      errorEl.style.display = 'block';
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      errorEl.textContent = 'Please enter a valid email address.';
-      errorEl.style.display = 'block';
-      return;
-    }
-
-    btn.disabled = true;
-    btn.textContent = 'Submitting…';
-
-    try {
-      const res = await fetch('https://iakmfeekvwtuzydvxkps.supabase.co/rest/v1/beta_signups', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlha21mZWVrdnd0dXp5ZHZ4a3BzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI3NTUxMDEsImV4cCI6MjA4ODMzMTEwMX0.feA9IuMFve-Z3R1ilbORBI-Q1Nun8BzwdXoWn_fmp7U',
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlha21mZWVrdnd0dXp5ZHZ4a3BzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI3NTUxMDEsImV4cCI6MjA4ODMzMTEwMX0.feA9IuMFve-Z3R1ilbORBI-Q1Nun8BzwdXoWn_fmp7U',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          apple_id: appleId,
-          has_switch: hasSwitch,
-          submitted_at: new Date().toISOString()
-        })
-      });
-
-      if (!res.ok) throw new Error('Submit failed');
-
-      document.getElementById('formContent').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
-
-    } catch (err) {
-      errorEl.textContent = 'Something went wrong — please email us directly at hello@chirp-kids.com';
-      errorEl.style.display = 'block';
-      btn.disabled = false;
-      btn.textContent = '🐦 Request Beta Access';
-    }
-  }
-</script>
 
 </body>
 </html>
