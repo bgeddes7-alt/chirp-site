@@ -3,218 +3,257 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service — Chirp</title>
-<meta name="description" content="Chirp Terms of Service — the rules governing your use of the Chirp app.">
+<title>Terms of Service · Chirp</title>
+<meta name="description" content="Terms of Service for Chirp — the family screen-time reward app by Geddes Ventures LLC.">
+<meta name="robots" content="index,follow">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --indigo: #5b5ef4; --orange: #ff6b35; --navy: #1e1b4b;
-    --bg: #f7f8fc; --white: #ffffff; --text: #1a1d2e;
-    --muted: #8b90a7; --border: #e8eaf0;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+:root {
+  --ink: #171614;
+  --body: #3a3835;
+  --cream: #fdfbf5;
+  --card: #ffffff;
+  --rule: #e9e4d8;
+  --ochre: #b89a5a;
+  --purple-deep: #1e1b4b;
+  --purple-mid: #2d1b69;
+  --gold: #fbbf24;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--cream);
+  color: var(--body);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  nav {
-    background: rgba(247,248,252,0.96); backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px;
-    display: flex; align-items: center; justify-content: space-between;
-    position: sticky; top: 0; z-index: 100;
-  }
-  .nav-logo { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 22px; color: var(--indigo); text-decoration: none; }
-  .nav-logo span { color: var(--orange); }
-  .nav-back { font-size: 14px; color: var(--muted); text-decoration: none; }
-  .nav-back:hover { color: var(--text); }
+/* Header */
+.site-header {
+  background: linear-gradient(135deg, var(--purple-deep) 0%, var(--purple-mid) 100%);
+  padding: 22px 24px;
+}
+.site-header-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: -0.3px;
+  text-decoration: none;
+}
+.back-link {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.back-link:hover { color: white; }
 
-  .hero { background: var(--navy); color: white; padding: 60px 24px 48px; text-align: center; }
-  .hero-eyebrow { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--orange); margin-bottom: 12px; }
-  .hero h1 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(28px, 5vw, 44px); letter-spacing: -1.5px; margin-bottom: 12px; }
-  .hero p { font-size: 15px; color: rgba(255,255,255,0.6); max-width: 540px; margin: 0 auto; }
+/* Document */
+main {
+  max-width: 720px;
+  margin: 36px auto;
+  padding: 0 20px;
+}
+.doc-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 44px 40px 36px;
+  box-shadow: 0 1px 3px rgba(23, 22, 20, 0.06), 0 8px 30px rgba(23, 22, 20, 0.04);
+}
 
-  .container { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
+h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 34px;
+  color: var(--ink);
+  margin: 0 0 6px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+.subtitle {
+  color: #8b8478;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  letter-spacing: 0.2px;
+}
+.summary {
+  background: #fef9ea;
+  border-left: 3px solid var(--ochre);
+  padding: 14px 18px;
+  border-radius: 4px;
+  font-size: 14.5px;
+  color: #5a4f2d;
+  margin: 0 0 32px;
+}
+.summary strong { color: var(--ink); }
 
-  .summary-box { background: white; border-radius: 20px; padding: 28px 32px; border: 1.5px solid var(--border); margin-bottom: 48px; }
-  .summary-box h2 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 18px; color: var(--navy); margin-bottom: 16px; }
-  .summary-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
-  .summary-item:last-child { border: none; }
-  .summary-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--ink);
+  margin: 38px 0 12px;
+  letter-spacing: -0.2px;
+  scroll-margin-top: 80px;
+}
+h2 .num {
+  display: inline-block;
+  color: var(--ochre);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  margin-right: 10px;
+  vertical-align: 2px;
+}
+p { margin: 0 0 14px; }
+ul {
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+ul li { margin-bottom: 6px; }
+a { color: var(--purple-mid); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--purple-deep); }
+strong { color: var(--ink); }
 
-  .prose h2 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 22px; color: var(--navy); margin: 40px 0 12px; padding-top: 40px; border-top: 1px solid var(--border); }
-  .prose h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
-  .prose h3 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; color: var(--navy); margin: 20px 0 8px; }
-  .prose p { font-size: 15px; color: var(--text); margin-bottom: 14px; }
-  .prose ul { margin: 8px 0 14px 20px; }
-  .prose li { font-size: 15px; color: var(--text); margin-bottom: 6px; }
-  .prose a { color: var(--indigo); text-decoration: underline; }
-  .prose strong { font-weight: 600; color: var(--navy); }
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 28px 0;
+}
 
-  .callout { background: #fffbeb; border: 1.5px solid #fcd34d; border-radius: 14px; padding: 18px 22px; margin: 20px 0; font-size: 14px; color: #92400e; }
-  .callout strong { font-family: 'Nunito', sans-serif; font-weight: 800; }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 32px 20px 50px;
+  color: #8b8478;
+  font-size: 13px;
+}
+footer a { color: #6b665b; margin: 0 8px; }
 
-  .disclaimer-box { background: #fef2f2; border: 1.5px solid #fca5a5; border-radius: 14px; padding: 20px 24px; margin: 20px 0; }
-  .disclaimer-box p { font-size: 13px; color: #991b1b; margin: 0; line-height: 1.6; text-transform: uppercase; letter-spacing: 0.3px; font-weight: 500; }
-
-  footer { background: var(--navy); color: rgba(255,255,255,0.5); padding: 40px 24px 28px; text-align: center; }
-  .footer-logo { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 20px; color: white; margin-bottom: 16px; }
-  .footer-logo span { color: var(--orange); }
-  .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
-  .footer-link { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; }
-  .footer-link:hover { color: white; }
-  .footer-copy { font-size: 12px; }
+@media (max-width: 600px) {
+  .doc-card { padding: 30px 22px 24px; border-radius: 0; box-shadow: none; }
+  main { margin: 0 auto 0; padding: 0; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 17px; }
+  body { font-size: 15.5px; }
+}
 </style>
 </head>
 <body>
 
-<nav>
-  <a href="/" class="nav-logo">chirp<span>.</span></a>
-  <a href="/" class="nav-back">← Back to chirp-kids.com</a>
-</nav>
-
-<div class="hero">
-  <div class="hero-eyebrow">Legal</div>
-  <h1>Terms of Service</h1>
-  <p>Last updated: April 15, 2026 · Effective: April 15, 2026</p>
-</div>
-
-<div class="container">
-
-  <div class="summary-box">
-    <h2>🐦 The short version</h2>
-    <div class="summary-item">
-      <span class="summary-icon">👤</span>
-      <span><strong>You must be 18+ to create an account.</strong> Chirp accounts are for parents and guardians only.</span>
-    </div>
-    <div class="summary-item">
-      <span class="summary-icon">🆓</span>
-      <span><strong>Chirp has a free tier and a paid Family plan.</strong> The free tier is free forever. Paid subscriptions are processed through Apple. We'll give you advance notice of any pricing changes.</span>
-    </div>
-    <div class="summary-item">
-      <span class="summary-icon">🎮</span>
-      <span><strong>Nintendo integration modifies your parental controls.</strong> You're authorizing us to adjust settings on your behalf. You remain responsible for monitoring your child's screen time.</span>
-    </div>
-    <div class="summary-item">
-      <span class="summary-icon">⚠️</span>
-      <span><strong>Chirp is a tool, not a substitute for parenting.</strong> We make no guarantees about behavior change. Screen time limits can be circumvented by determined kids and technical issues.</span>
-    </div>
-    <div class="summary-item">
-      <span class="summary-icon">🗑️</span>
-      <span><strong>You can cancel anytime</strong> by emailing <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a>.</span>
-    </div>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="brand">chirp.</a>
+    <a href="/" class="back-link">← Back to home</a>
   </div>
+</header>
 
-  <div class="prose">
+<main>
+  <article class="doc-card">
 
-    <h2>1. Agreement to terms</h2>
-    <p>By accessing or using Chirp (the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, do not use the Service.</p>
-    <p>These Terms constitute a legally binding agreement between you and <strong>Geddes Ventures LLC</strong>, a California limited liability company ("Company," "we," "us," or "our").</p>
+    <h1>Terms of Service</h1>
+    <div class="subtitle">Last updated: May 14, 2026</div>
 
-    <h2>2. Eligibility</h2>
-    <p>You must be at least 18 years old to create a Chirp account. By creating an account, you represent and warrant that:</p>
-    <ul>
-      <li>You are at least 18 years of age;</li>
-      <li>You have the legal authority to enter into this agreement;</li>
-      <li>You are creating an account as a parent or legal guardian of any children whose sub-profiles you create within your account;</li>
-      <li>All information you provide is accurate and complete.</li>
-    </ul>
-    <p>Children under 18 may not create their own accounts. Children interact with Chirp only through parent-managed sub-profiles within a parent's account.</p>
-
-    <h2>3. Pricing and plans</h2>
-    <p>Chirp offers a free tier and a paid Family plan subscription. The free tier is available indefinitely at no charge. The Family plan is a paid subscription processed through Apple's App Store using Apple In-App Purchase.</p>
-    <p>By subscribing to the Family plan, you agree to Apple's payment terms. Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current billing period. You may manage or cancel your subscription at any time through your Apple ID account settings.</p>
-    <p>We reserve the right to change pricing for the Family plan. We will provide at least 30 days' advance notice of any price increases via the email address associated with your account. Continued use of the paid plan after a price change takes effect constitutes your acceptance of the new price.</p>
-
-    <h2>4. Your account</h2>
-    <p>You are responsible for:</p>
-    <ul>
-      <li>Maintaining the confidentiality of your account credentials;</li>
-      <li>All activity that occurs under your account;</li>
-      <li>Ensuring that your use of the Service complies with these Terms and all applicable laws;</li>
-      <li>Promptly notifying us at <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a> of any unauthorized use of your account.</li>
-    </ul>
-
-    <h2>5. Nintendo Switch integration</h2>
-    <p>Chirp offers an optional integration with Nintendo Switch parental controls. By connecting your Nintendo account to Chirp, you:</p>
-    <ul>
-      <li>Authorize Chirp to modify your Nintendo Switch parental control settings — specifically, to temporarily increase or restore the daily play time limit — on your behalf;</li>
-      <li>Acknowledge that you are the account holder for the connected Nintendo account and have authority to make these changes;</li>
-      <li>Understand that Chirp communicates with Nintendo's servers using your stored session credentials;</li>
-      <li>Accept that Nintendo may change, limit, or discontinue API access at any time, which could disrupt or disable this feature;</li>
-      <li>Remain solely responsible for monitoring your child's actual screen time and for the parental control settings on your device.</li>
-    </ul>
-    <div class="callout">
-      <strong>Important:</strong> Chirp is not affiliated with, endorsed by, or officially partnered with Nintendo Co., Ltd. Nintendo Switch is a trademark of Nintendo. Chirp's Nintendo integration relies on Nintendo's parental controls API, which Nintendo may modify or discontinue at any time.
+    <div class="summary">
+      <strong>The short version:</strong> Chirp is a subscription app for families. Parents set up tasks; kids earn screen time. We charge for the Family plan, you can cancel anytime in Apple Settings, and we don't sell your data. The full terms below cover the legal details.
     </div>
-    <p>You may disconnect your Nintendo account at any time within the Chirp settings. Upon disconnection, we will delete your stored Nintendo credentials from our database.</p>
 
-    <h2>6. Acceptable use</h2>
+    <h2><span class="num">1</span>Agreement to these Terms</h2>
+    <p>These Terms of Service ("<strong>Terms</strong>") form a binding agreement between you and Geddes Ventures LLC ("<strong>Chirp</strong>", "<strong>we</strong>", "<strong>us</strong>"), a California limited liability company, governing your access to and use of the Chirp mobile application and related services (collectively, the "<strong>Service</strong>"). By creating an account, downloading the app, or using the Service, you agree to these Terms. If you don't agree, don't use the Service.</p>
+
+    <h2><span class="num">2</span>Eligibility</h2>
+    <p>You must be at least 18 years old to create a Chirp account. The Service is designed for parents and legal guardians to manage screen time for their own children. Children may interact with the app under a parent or guardian's supervised account, but children may not create their own accounts. If you are a parent enabling a child to use the app, you represent that you have legal authority to consent on their behalf.</p>
+
+    <h2><span class="num">3</span>Your Account</h2>
+    <p>You're responsible for the information you provide and for keeping your password secure. You agree to provide accurate information and to update it when it changes. You're responsible for all activity that happens under your account, including actions taken by anyone you share the account with (such as a co-parent). If you suspect unauthorized access, contact us at <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a>.</p>
+
+    <h2><span class="num">4</span>Subscriptions, Billing, and Free Trial</h2>
+    <p>Chirp offers a free tier with limited features and a paid <strong>Chirp Family</strong> subscription with full features. Family is available as a monthly or annual subscription, with pricing displayed at the point of purchase.</p>
+    <p><strong>Free trial.</strong> New Family subscribers may be eligible for a 7-day free trial. The trial begins when you subscribe. To avoid being charged, cancel before the trial ends in your Apple Account subscription settings.</p>
+    <p><strong>Auto-renewal.</strong> Subscriptions renew automatically at the end of each billing period unless you cancel at least 24 hours before the period ends. Your Apple ID will be charged for renewal within 24 hours of the period end at the price displayed when you subscribed.</p>
+    <p><strong>How to cancel.</strong> Manage or cancel your subscription anytime by going to <em>Settings → [your Apple ID] → Subscriptions</em> on your iPhone, or through the "Manage in Apple Settings" link inside the Chirp app.</p>
+    <p><strong>Refunds.</strong> Refunds for App Store purchases are handled directly by Apple. You can request a refund at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. We don't issue refunds directly for App Store purchases.</p>
+    <p><strong>Price changes.</strong> If we change the price of a subscription, we'll notify you in advance and ask for your consent before the new price takes effect, as required by Apple.</p>
+
+    <h2><span class="num">5</span>Free Tier</h2>
+    <p>The free tier of Chirp lets you manage one (1) child profile with up to five (5) active tasks, with manual approval and photo proof. Free-tier limits and features may change over time as we develop the Service. We'll give reasonable notice before any change that would reduce features you're already actively using.</p>
+
+    <h2><span class="num">6</span>Acceptable Use</h2>
     <p>You agree not to:</p>
     <ul>
-      <li>Use the Service for any unlawful purpose or in violation of any applicable laws;</li>
-      <li>Attempt to circumvent, disable, or interfere with security features of the Service;</li>
-      <li>Reverse engineer, decompile, or disassemble any portion of the Service;</li>
-      <li>Use the Service to harass, abuse, or harm others;</li>
-      <li>Create accounts for anyone other than yourself;</li>
-      <li>Use the Service in any way that could damage or impair the Service or interfere with other users.</li>
+      <li>Use the Service for any unlawful purpose or in violation of any applicable law;</li>
+      <li>Upload content that is illegal, harmful, harassing, abusive, defamatory, sexually explicit, or that infringes anyone's rights;</li>
+      <li>Upload photos of children other than your own or those for whom you have legal authority;</li>
+      <li>Attempt to access another user's account or any non-public area of the Service;</li>
+      <li>Reverse-engineer, decompile, or attempt to extract source code from the Service;</li>
+      <li>Use automated systems (bots, scrapers) to access the Service without our written permission;</li>
+      <li>Interfere with or disrupt the Service or any servers or networks connected to it.</li>
     </ul>
+    <p>We may suspend or terminate accounts that violate these rules.</p>
 
-    <h2>7. Intellectual property</h2>
-    <p>The Service, including its design, code, content, and branding (including the Chirp name and logo), is owned by Geddes Ventures LLC and is protected by applicable intellectual property laws. You may not copy, reproduce, distribute, or create derivative works based on the Service without our express written permission.</p>
-    <p>You retain ownership of any content you submit to the Service (such as task names and descriptions). By submitting content, you grant us a limited license to use that content solely to provide and improve the Service.</p>
+    <h2><span class="num">7</span>Your Content</h2>
+    <p>You retain ownership of all content you upload to Chirp — including kid profile names and emojis, task descriptions, and photo proofs submitted to complete tasks ("<strong>Your Content</strong>"). By uploading content, you grant us a limited, non-exclusive license to store, process, and display Your Content solely for the purpose of operating the Service for you. We don't use Your Content to train AI models, sell to third parties, or display to anyone outside your family account.</p>
+    <p>You can delete Your Content anytime by deleting your account from <em>Settings → Account → Delete Account</em>, which permanently removes all kid profiles, tasks, completion history, and uploaded photos.</p>
 
-    <h2>8. Disclaimers</h2>
-    <div class="disclaimer-box">
-      <p>The Service is provided "as is" and "as available" without warranties of any kind, express or implied. We do not warrant that the Service will be uninterrupted, error-free, or completely secure. We make no guarantees about behavioral outcomes for children using the Service.</p>
-    </div>
-    <p>Specifically:</p>
-    <ul>
-      <li>Screen time limits enforced through Nintendo parental controls or other third-party integrations may be circumvented through technical means or by accessing other devices.</li>
-      <li>Chirp is a tool to assist parents in managing screen time; it is not a substitute for active parental supervision.</li>
-      <li>We do not guarantee that use of Chirp will produce any particular behavioral outcomes.</li>
-    </ul>
+    <h2><span class="num">8</span>Intellectual Property</h2>
+    <p>The Chirp name, logo, app design, source code, and all related materials are the property of Geddes Ventures LLC. These Terms don't grant you any rights to our trademarks, logos, or branding except as needed to use the Service for personal, non-commercial purposes.</p>
 
-    <h2>9. Limitation of liability</h2>
-    <p>To the fullest extent permitted by applicable law, Geddes Ventures LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of data, loss of profits, or damages arising from your use of or inability to use the Service.</p>
-    <p>Our total liability to you for any claims arising from these Terms or the Service shall not exceed the greater of (a) the amount you paid us in the 12 months preceding the claim, or (b) $50.</p>
-    <p>Some jurisdictions do not allow limitations on implied warranties or exclusion of certain damages, so some of the above limitations may not apply to you.</p>
+    <h2><span class="num">9</span>Third-Party Services</h2>
+    <p>Chirp relies on third-party services to operate, including Apple (App Store, push notifications), Supabase (database and authentication), RevenueCat (subscription management), and Resend (transactional email). Your use of the Service is also subject to these providers' terms. We're not responsible for third-party services and don't control how they handle data on their own platforms. See our <a href="/privacy">Privacy Policy</a> for details on what data is shared with whom.</p>
 
-    <h2>10. Indemnification</h2>
-    <p>You agree to indemnify, defend, and hold harmless Geddes Ventures LLC and its members, officers, and agents from any claims, damages, losses, and expenses (including reasonable attorneys' fees) arising from your use of the Service or your violation of these Terms.</p>
+    <h2><span class="num">10</span>Disclaimers</h2>
+    <p>The Service is provided "<strong>AS IS</strong>" and "<strong>AS AVAILABLE</strong>" without warranties of any kind, express or implied. We don't guarantee that the Service will be uninterrupted, error-free, or secure. Chirp is a tool to help families manage screen time and rewards — it is not a substitute for parenting judgment, medical or psychological advice, or any form of professional childcare.</p>
 
-    <h2>11. Termination</h2>
-    <p>You may terminate your account at any time by emailing <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a>. Upon termination, your right to use the Service ceases immediately.</p>
-    <p>We may suspend or terminate your account if you violate these Terms, at our sole discretion, with or without notice. We reserve the right to discontinue the Service at any time.</p>
+    <h2><span class="num">11</span>Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Geddes Ventures LLC and its members, officers, and affiliates won't be liable for any indirect, incidental, special, consequential, or punitive damages — including loss of profits, data, or use — arising from or related to your use of the Service. Our total liability to you for any claim related to the Service is limited to the greater of (a) the amount you paid us in the twelve months before the claim, or (b) USD $50.</p>
 
-    <h2>12. Governing law</h2>
-    <p>These Terms are governed by the laws of the State of California, without regard to its conflict of law provisions. Any disputes arising from these Terms shall be resolved in the courts located in Los Angeles County, California, and you consent to the personal jurisdiction of such courts.</p>
+    <h2><span class="num">12</span>Indemnification</h2>
+    <p>You agree to defend, indemnify, and hold harmless Geddes Ventures LLC from any claims, damages, or expenses (including reasonable legal fees) arising from your use of the Service, your violation of these Terms, or your violation of any third party's rights.</p>
 
-    <h2>13. Changes to terms</h2>
-    <p>We may update these Terms from time to time. Material changes will be communicated via email to the address associated with your account at least 30 days before taking effect. Your continued use of the Service after the effective date constitutes acceptance of the updated Terms.</p>
+    <h2><span class="num">13</span>Termination</h2>
+    <p>You can stop using Chirp at any time and delete your account in-app. We may suspend or terminate your access if you violate these Terms, if required by law, or if we cease offering the Service. On termination, sections of these Terms that by their nature should survive (like intellectual property, disclaimers, limitation of liability) will remain in effect.</p>
 
-    <h2>14. Entire agreement</h2>
-    <p>These Terms, together with our <a href="/privacy.html">Privacy Policy</a>, constitute the entire agreement between you and Geddes Ventures LLC regarding the Service and supersede all prior agreements or understandings.</p>
+    <h2><span class="num">14</span>Changes to these Terms</h2>
+    <p>We may update these Terms from time to time. If a change is material, we'll notify you in-app or by email. Continuing to use the Service after a change means you accept the new Terms.</p>
 
-    <h2>15. Contact</h2>
-    <p>Questions about these Terms? Contact us:</p>
+    <h2><span class="num">15</span>Governing Law and Disputes</h2>
+    <p>These Terms are governed by the laws of the State of California, without regard to its conflict-of-law rules. Any dispute arising from these Terms or the Service will be resolved exclusively in the state or federal courts located in Los Angeles County, California, and you consent to personal jurisdiction there.</p>
+
+    <h2><span class="num">16</span>Contact</h2>
+    <p>Questions about these Terms? Email <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a> or write to:</p>
     <p>
-      <strong>Geddes Ventures LLC</strong><br>
-      Email: <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a><br>
-      Website: <a href="https://chirp-kids.com">chirp-kids.com</a>
+      Geddes Ventures LLC<br>
+      31926 Watergate Ct<br>
+      Westlake Village, CA 91361-4020<br>
+      United States
     </p>
 
-  </div>
-</div>
+  </article>
+</main>
 
 <footer>
-  <div class="footer-logo">chirp<span>.</span></div>
-  <div class="footer-links">
-    <a href="/" class="footer-link">Home</a>
-    <a href="/privacy.html" class="footer-link">Privacy Policy</a>
-    <a href="/terms.html" class="footer-link">Terms of Service</a>
-    <a href="mailto:hello@chirp-kids.com" class="footer-link">Contact</a>
-  </div>
-  <div class="footer-copy">© 2026 Geddes Ventures LLC</div>
+  © 2026 Geddes Ventures LLC ·
+  <a href="/privacy">Privacy</a> ·
+  <a href="/terms">Terms</a> ·
+  <a href="mailto:hello@chirp-kids.com">Contact</a>
 </footer>
 
 </body>
