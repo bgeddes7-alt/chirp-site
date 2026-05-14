@@ -3,236 +3,322 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Chirp</title>
-<meta name="description" content="Chirp Privacy Policy — how we collect, use, and protect your family's data.">
+<title>Privacy Policy · Chirp</title>
+<meta name="description" content="Privacy Policy for Chirp — what we collect, why we collect it, and your controls. By Geddes Ventures LLC.">
+<meta name="robots" content="index,follow">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --indigo: #5b5ef4; --orange: #ff6b35; --navy: #1e1b4b;
-    --bg: #f7f8fc; --white: #ffffff; --text: #1a1d2e;
-    --muted: #8b90a7; --border: #e8eaf0; --green: #22c55e;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+:root {
+  --ink: #171614;
+  --body: #3a3835;
+  --cream: #fdfbf5;
+  --card: #ffffff;
+  --rule: #e9e4d8;
+  --ochre: #b89a5a;
+  --purple-deep: #1e1b4b;
+  --purple-mid: #2d1b69;
+  --gold: #fbbf24;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--cream);
+  color: var(--body);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  nav {
-    background: rgba(247,248,252,0.96); backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px;
-    display: flex; align-items: center; justify-content: space-between;
-    position: sticky; top: 0; z-index: 100;
-  }
-  .nav-logo { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 22px; color: var(--indigo); text-decoration: none; }
-  .nav-logo span { color: var(--orange); }
-  .nav-back { font-size: 14px; color: var(--muted); text-decoration: none; }
-  .nav-back:hover { color: var(--text); }
+.site-header {
+  background: linear-gradient(135deg, var(--purple-deep) 0%, var(--purple-mid) 100%);
+  padding: 22px 24px;
+}
+.site-header-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: -0.3px;
+  text-decoration: none;
+}
+.back-link {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.back-link:hover { color: white; }
 
-  .hero {
-    background: var(--navy); color: white; padding: 60px 24px 48px; text-align: center;
-  }
-  .hero-eyebrow { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--orange); margin-bottom: 12px; }
-  .hero h1 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(28px, 5vw, 44px); letter-spacing: -1.5px; margin-bottom: 12px; }
-  .hero p { font-size: 15px; color: rgba(255,255,255,0.6); max-width: 540px; margin: 0 auto; }
+main {
+  max-width: 720px;
+  margin: 36px auto;
+  padding: 0 20px;
+}
+.doc-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 44px 40px 36px;
+  box-shadow: 0 1px 3px rgba(23, 22, 20, 0.06), 0 8px 30px rgba(23, 22, 20, 0.04);
+}
 
-  .container { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
+h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 34px;
+  color: var(--ink);
+  margin: 0 0 6px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+.subtitle {
+  color: #8b8478;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  letter-spacing: 0.2px;
+}
+.summary {
+  background: #fef9ea;
+  border-left: 3px solid var(--ochre);
+  padding: 14px 18px;
+  border-radius: 4px;
+  font-size: 14.5px;
+  color: #5a4f2d;
+  margin: 0 0 32px;
+}
+.summary strong { color: var(--ink); }
 
-  .summary-box {
-    background: white; border-radius: 20px; padding: 28px 32px;
-    border: 1.5px solid var(--border); margin-bottom: 48px;
-  }
-  .summary-box h2 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 18px; color: var(--navy); margin-bottom: 16px; }
-  .summary-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
-  .summary-item:last-child { border: none; }
-  .summary-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--ink);
+  margin: 38px 0 12px;
+  letter-spacing: -0.2px;
+  scroll-margin-top: 80px;
+}
+h2 .num {
+  display: inline-block;
+  color: var(--ochre);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  margin-right: 10px;
+  vertical-align: 2px;
+}
+p { margin: 0 0 14px; }
+ul {
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+ul li { margin-bottom: 6px; }
+a { color: var(--purple-mid); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--purple-deep); }
+strong { color: var(--ink); }
 
-  .prose h2 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 22px; color: var(--navy); margin: 40px 0 12px; padding-top: 40px; border-top: 1px solid var(--border); }
-  .prose h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
-  .prose h3 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; color: var(--navy); margin: 20px 0 8px; }
-  .prose p { font-size: 15px; color: var(--text); margin-bottom: 14px; }
-  .prose ul { margin: 8px 0 14px 20px; }
-  .prose li { font-size: 15px; color: var(--text); margin-bottom: 6px; }
-  .prose a { color: var(--indigo); text-decoration: underline; }
-  .prose strong { font-weight: 600; color: var(--navy); }
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 20px;
+  font-size: 14px;
+}
+table.data-table th, table.data-table td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+table.data-table th {
+  background: #faf8f1;
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
-  .callout { background: #fffbeb; border: 1.5px solid #fcd34d; border-radius: 14px; padding: 18px 22px; margin: 20px 0; font-size: 14px; color: #92400e; }
-  .callout strong { font-family: 'Nunito', sans-serif; font-weight: 800; }
+footer {
+  text-align: center;
+  padding: 32px 20px 50px;
+  color: #8b8478;
+  font-size: 13px;
+}
+footer a { color: #6b665b; margin: 0 8px; }
 
-  .coppa-box { background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 14px; padding: 20px 24px; margin: 20px 0; }
-  .coppa-box h3 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; color: #166534; margin-bottom: 8px; }
-  .coppa-box p { font-size: 14px; color: #166534; margin: 0; }
-
-  footer { background: var(--navy); color: rgba(255,255,255,0.5); padding: 40px 24px 28px; text-align: center; }
-  .footer-logo { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 20px; color: white; margin-bottom: 16px; }
-  .footer-logo span { color: var(--orange); }
-  .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
-  .footer-link { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; }
-  .footer-link:hover { color: white; }
-  .footer-copy { font-size: 12px; }
+@media (max-width: 600px) {
+  .doc-card { padding: 30px 22px 24px; border-radius: 0; box-shadow: none; }
+  main { margin: 0 auto 0; padding: 0; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 17px; }
+  body { font-size: 15.5px; }
+  table.data-table th, table.data-table td { padding: 10px 8px; font-size: 13px; }
+}
 </style>
 </head>
 <body>
 
-<nav>
-  <a href="/" class="nav-logo">chirp<span>.</span></a>
-  <a href="/" class="nav-back">← Back to chirp-kids.com</a>
-</nav>
-
-<div class="hero">
-  <div class="hero-eyebrow">Legal</div>
-  <h1>Privacy Policy</h1>
-  <p>Last updated: March 9, 2026 · Effective: March 9, 2026</p>
-</div>
-
-<div class="container">
-
-  <!-- TL;DR Summary Box -->
-  <div class="summary-box">
-    <h2>🐦 The short version</h2>
-    <div class="summary-item">
-      <span class="summary-icon">👨‍👩‍👧</span>
-      <span><strong>Parents are the account holders.</strong> Kids are sub-profiles managed by a parent. We never create accounts for children or collect personal information from children directly.</span>
-    </div>
-    <div class="summary-item">
-      <span class="summary-icon">🔒</span>
-      <span><strong>We don't sell your data.</strong> Ever. We use your information only to operate Chirp.</span>
-    </div>
-    <div class="summary-item">
-      <span class="summary-icon">🎮</span>
-      <span><strong>Nintendo Switch connection is optional.</strong> If you connect it, we store your Nintendo session token to automate parental controls on your behalf.</span>
-    </div>
-    <div class="summary-item">
-      <span class="summary-icon">📧</span>
-      <span><strong>We collect your email</strong> to create your account and send important service updates. No marketing spam without your consent.</span>
-    </div>
-    <div class="summary-item">
-      <span class="summary-icon">🗑️</span>
-      <span><strong>You can delete your data anytime</strong> by emailing <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a>.</span>
-    </div>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="brand">chirp.</a>
+    <a href="/" class="back-link">← Back to home</a>
   </div>
+</header>
 
-  <div class="prose">
+<main>
+  <article class="doc-card">
 
-    <h2>1. Who we are</h2>
-    <p>Chirp is a screen time management application operated by <strong>Geddes Ventures LLC</strong>, a California limited liability company ("we," "us," or "our"). Our contact email is <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a>.</p>
-    <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the Chirp web application and any related services (collectively, the "Service").</p>
+    <h1>Privacy Policy</h1>
+    <div class="subtitle">Last updated: May 14, 2026</div>
 
-    <h2>2. Children's privacy (COPPA)</h2>
-    <div class="coppa-box">
-      <h3>✅ Our COPPA-compliant design</h3>
-      <p>Chirp is designed so that <strong>only parents or legal guardians (age 18+) create accounts and provide personal information</strong>. Children use Chirp as sub-profiles within their parent's account. We do not knowingly collect personal information directly from children under 13. Children do not register, log in, or submit personal data — they access Chirp only through a parent-controlled interface.</p>
+    <div class="summary">
+      <strong>The short version:</strong> We collect the minimum needed to run the app — a parent's email, kid profile names and emojis, tasks, and photo proofs. We never sell your data. We never use it to train AI. Apple handles all payments — we never see credit card information. You can export or delete everything in-app, anytime.
     </div>
-    <p>If you believe we have inadvertently collected personal information from a child under 13 without parental consent, please contact us immediately at <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a> and we will delete that information promptly.</p>
-    <p>Child sub-profiles contain only a first name (or nickname) assigned by the parent, and a task/minutes balance associated with the parent's account. This information is entered by the parent, not the child.</p>
 
-    <h2>3. Information we collect</h2>
+    <h2><span class="num">1</span>Who we are</h2>
+    <p>Chirp is operated by <strong>Geddes Ventures LLC</strong>, a California limited liability company located at 31926 Watergate Ct, Westlake Village, CA 91361-4020. This Privacy Policy explains what personal information we collect, how we use it, and what controls you have.</p>
+    <p>This policy applies to the Chirp mobile app, the website at <a href="https://chirp-kids.com">chirp-kids.com</a>, and any related services.</p>
 
-    <h3>Information you provide to us</h3>
-    <ul>
-      <li><strong>Account information:</strong> Your email address and password when you create a parent account.</li>
-      <li><strong>Child profile information:</strong> First names or nicknames you assign to child sub-profiles under your account.</li>
-      <li><strong>Task and activity data:</strong> Tasks you create, approval decisions you make, screen time minutes earned and spent.</li>
-      <li><strong>Nintendo Switch connection (optional):</strong> If you choose to connect your Nintendo account, we store a session token and access token on your behalf to communicate with Nintendo's parental controls API. We store the device ID and device name associated with your Switch. We never store your Nintendo account password.</li>
-    </ul>
+    <h2><span class="num">2</span>What we collect</h2>
+    <p>We collect only what's needed to run the app for you. Specifically:</p>
+    <table class="data-table">
+      <tr>
+        <th>Category</th>
+        <th>What's collected</th>
+        <th>Why</th>
+      </tr>
+      <tr>
+        <td><strong>Account</strong></td>
+        <td>Email address, password (hashed), optional display name</td>
+        <td>To sign you in and contact you about your account</td>
+      </tr>
+      <tr>
+        <td><strong>Kid profiles</strong></td>
+        <td>Name (or nickname), emoji avatar, screen-time balance</td>
+        <td>To track tasks and rewards for each child</td>
+      </tr>
+      <tr>
+        <td><strong>Tasks &amp; completions</strong></td>
+        <td>Task descriptions you create, completion timestamps, photo proofs you upload</td>
+        <td>To run the reward system you set up</td>
+      </tr>
+      <tr>
+        <td><strong>Subscription status</strong></td>
+        <td>Whether you're on the free or Family plan, trial state, renewal date</td>
+        <td>To unlock paid features and show your billing status</td>
+      </tr>
+      <tr>
+        <td><strong>Device data</strong></td>
+        <td>iOS version, app version, push notification token (if you opt in)</td>
+        <td>To deliver push notifications and debug crashes</td>
+      </tr>
+    </table>
+    <p>We do <strong>not</strong> collect: precise location, contacts, browsing history outside the app, microphone, health data, advertising identifiers, or biometric data. Face ID / Touch ID happens entirely on your device — Apple never shares your biometric data with us.</p>
+    <p><strong>Payments.</strong> All payments are processed by Apple through the App Store. We never see your credit card, bank account, or full billing address. RevenueCat (our subscription management provider) tells us only whether you have an active subscription, what plan, when it renews, and an anonymized transaction ID.</p>
 
-    <h3>Information collected automatically</h3>
-    <ul>
-      <li><strong>Usage data:</strong> Pages visited, features used, timestamps of actions. Used to improve the Service.</li>
-      <li><strong>Device information:</strong> Browser type, operating system, and device type for compatibility purposes.</li>
-      <li><strong>Log data:</strong> IP address, browser type, and pages accessed, collected automatically by our hosting provider (Vercel) and database provider (Supabase).</li>
-    </ul>
-
-    <h3>Information we do NOT collect</h3>
-    <ul>
-      <li>Payment information (processed securely by Apple — we do not store payment details)</li>
-      <li>Location data beyond what's inferred from IP address</li>
-      <li>Photos, videos, or media files</li>
-      <li>Any personal information entered by children</li>
-    </ul>
-
-    <h2>4. How we use your information</h2>
+    <h2><span class="num">3</span>How we use your information</h2>
     <p>We use the information we collect to:</p>
     <ul>
-      <li>Create and manage your account and child sub-profiles</li>
-      <li>Operate the task approval and screen time balance features</li>
-      <li>Communicate with Nintendo's parental controls API on your behalf (if connected)</li>
-      <li>Send push notifications for task submissions and approvals</li>
-      <li>Send transactional emails (account confirmations, password resets)</li>
-      <li>Improve the Service based on usage patterns</li>
-      <li>Respond to support requests</li>
-      <li>Comply with legal obligations</li>
+      <li>Operate the app — let you sign in, manage kid profiles, create tasks, approve completions, and grant rewards;</li>
+      <li>Process subscriptions and apply paid features;</li>
+      <li>Send transactional emails (sign-in links, password resets, account changes) and, if you opt in, push notifications about task approvals;</li>
+      <li>Diagnose crashes and improve reliability;</li>
+      <li>Respond to your support requests;</li>
+      <li>Comply with legal obligations.</li>
     </ul>
-    <p>We will not use your information for advertising, and we will not sell, rent, or share your personal information with third parties for their marketing purposes.</p>
+    <p>We do <strong>not</strong> use your data for advertising, ad targeting, AI model training, or any third-party marketing.</p>
 
-    <h2>5. Nintendo Switch integration</h2>
-    <p>Chirp's Nintendo Switch integration is entirely optional. If you choose to connect your Nintendo account:</p>
+    <h2><span class="num">4</span>Children's privacy</h2>
+    <p>Chirp is designed for families, but children do <strong>not</strong> create their own accounts. A parent or legal guardian creates the account and adds children as profiles inside the account. Children interact with the app only through their parent's account, under the parent's supervision.</p>
+    <p>Information about children — names (or nicknames), emoji avatars, task completions, and photo proofs — is provided by the parent. Parents have full control to view, edit, or delete this information at any time from the app's Settings, including <strong>permanently deleting</strong> all data via Settings → Account → Delete Account.</p>
+    <p>We comply with the U.S. Children's Online Privacy Protection Act (COPPA). We do not knowingly collect personal information directly from children under 13. If you believe we've inadvertently collected information from a child outside of a parent's account, contact <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a> and we'll delete it promptly.</p>
+
+    <h2><span class="num">5</span>How we share information</h2>
+    <p>We share data only with service providers we need to run the app, and only the minimum amount they need to do their job:</p>
+    <table class="data-table">
+      <tr>
+        <th>Provider</th>
+        <th>What they receive</th>
+        <th>Purpose</th>
+      </tr>
+      <tr>
+        <td><strong>Apple</strong></td>
+        <td>App Store purchase data, push notification tokens</td>
+        <td>Billing &amp; notifications</td>
+      </tr>
+      <tr>
+        <td><strong>Supabase</strong></td>
+        <td>Account, kid profiles, tasks, completions, photos</td>
+        <td>Database &amp; authentication</td>
+      </tr>
+      <tr>
+        <td><strong>RevenueCat</strong></td>
+        <td>Anonymized user ID, subscription status</td>
+        <td>Subscription management</td>
+      </tr>
+      <tr>
+        <td><strong>Resend</strong></td>
+        <td>Email address, message content</td>
+        <td>Sign-in / transactional email</td>
+      </tr>
+    </table>
+    <p>We don't sell personal information. We don't share it with advertisers or data brokers. We may disclose information if required by law (subpoena, court order) or if necessary to protect our rights, your safety, or the safety of others — and only the minimum needed in such cases.</p>
+
+    <h2><span class="num">6</span>Where data is stored</h2>
+    <p>Account data and content are stored on Supabase infrastructure in the United States (us-east-1 region). If you use the app from outside the U.S., your data will be transferred to and processed in the U.S.</p>
+
+    <h2><span class="num">7</span>How long we keep your data</h2>
+    <p>We keep your account and content for as long as your account is active. When you delete your account in-app, we permanently delete all associated data — kid profiles, tasks, completion history, photo proofs, and your authentication record — within 30 days, except where retention is required by law (e.g., tax records for completed subscription transactions, which are kept for the period required by applicable law).</p>
+
+    <h2><span class="num">8</span>Your rights and controls</h2>
+    <p>You can:</p>
     <ul>
-      <li>You authorize Chirp to modify your Nintendo Switch parental control settings (specifically, the daily play time limit) on your behalf.</li>
-      <li>We store your Nintendo session token and access token in our secure database (Supabase) to perform these modifications without requiring you to re-authenticate each time.</li>
-      <li>We modify parental control settings only when a child in your account starts or ends a screen time session.</li>
-      <li>You can disconnect your Nintendo account at any time within the Chirp settings, which will delete your stored tokens from our database.</li>
+      <li><strong>Export your data</strong> — Settings → Account → Export My Data. We email you a JSON file with everything we have for your account.</li>
+      <li><strong>Delete your account</strong> — Settings → Account → Delete Account. This is permanent and removes everything from our systems.</li>
+      <li><strong>Edit kid profiles, tasks, and history</strong> directly in the app.</li>
+      <li><strong>Manage push notifications</strong> through iOS Settings or the in-app toggle.</li>
+      <li><strong>Cancel your subscription</strong> through your Apple ID subscription settings.</li>
     </ul>
-    <div class="callout">
-      <strong>Note:</strong> Chirp's Nintendo integration uses Nintendo's official parental controls API. Chirp is not affiliated with, endorsed by, or sponsored by Nintendo Co., Ltd. Nintendo Switch is a trademark of Nintendo.
-    </div>
+    <p>If you're in California, the EU, the UK, or another jurisdiction with specific privacy rights (right of access, deletion, correction, portability, restriction), you can exercise those rights by contacting <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a>. We won't discriminate against you for exercising your rights.</p>
 
-    <h2>6. Data sharing and disclosure</h2>
-    <p>We do not sell your personal information. We may share information in the following limited circumstances:</p>
-    <ul>
-      <li><strong>Service providers:</strong> We use Supabase (database and authentication) and Vercel (hosting). These providers process data on our behalf and are contractually required to protect it.</li>
-      <li><strong>Nintendo:</strong> When you use the Nintendo integration, your Nintendo session token is used to make API calls to Nintendo's servers.</li>
-      <li><strong>Legal requirements:</strong> If required by law, court order, or governmental authority.</li>
-      <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction. We will notify you before your information is subject to a materially different privacy policy.</li>
-    </ul>
+    <h2><span class="num">9</span>Security</h2>
+    <p>We use industry-standard security practices, including encrypted connections (HTTPS / TLS), hashed passwords, row-level security on our database (no user can read another user's data), and secure cloud storage for uploaded photos. No system is perfectly secure — if we ever experience a data breach affecting your information, we'll notify you as required by law.</p>
 
-    <h2>7. Data retention</h2>
-    <p>We retain your account data for as long as your account is active. If you request deletion of your account, we will delete your personal information within 30 days, except where we are required to retain it for legal or compliance purposes.</p>
-    <p>Anonymized or aggregated data (e.g., aggregate usage statistics) may be retained indefinitely.</p>
+    <h2><span class="num">10</span>International users</h2>
+    <p>Chirp is currently offered to users in the United States and Canada. If you access the Service from elsewhere, you do so on your own initiative and are responsible for compliance with local laws. Data is transferred to and processed in the United States.</p>
 
-    <h2>8. Security</h2>
-    <p>We implement reasonable security measures to protect your information, including encrypted connections (HTTPS), secure database access controls through Supabase, and row-level security policies that prevent one user from accessing another's data.</p>
-    <p>However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security.</p>
+    <h2><span class="num">11</span>Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. If we make a material change, we'll notify you in-app or by email at least 30 days before it takes effect. Continuing to use the Service after a change means you accept the updated policy.</p>
 
-    <h2>9. Your rights and choices</h2>
-    <p>You have the right to:</p>
-    <ul>
-      <li><strong>Access:</strong> Request a copy of the personal information we hold about you.</li>
-      <li><strong>Correction:</strong> Request that we correct inaccurate information.</li>
-      <li><strong>Deletion:</strong> Request that we delete your account and associated data.</li>
-      <li><strong>Portability:</strong> Request your data in a machine-readable format.</li>
-      <li><strong>Opt-out of communications:</strong> Unsubscribe from non-essential emails at any time.</li>
-    </ul>
-    <p>To exercise any of these rights, email us at <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a>. We will respond within 30 days.</p>
-
-    <h2>10. California residents (CCPA)</h2>
-    <p>California residents have additional rights under the California Consumer Privacy Act, including the right to know what personal information we collect, the right to delete personal information, and the right to opt out of the sale of personal information. We do not sell personal information. To exercise your rights, contact us at <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a>.</p>
-
-    <h2>11. Third-party services</h2>
-    <p>The Service uses Google Fonts for typography. Google may collect data in connection with font delivery; please see Google's privacy policy for details. We do not use third-party advertising networks or analytics services that track users across websites.</p>
-
-    <h2>12. Changes to this policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of material changes by posting the updated policy with a new "Last updated" date and, where required, by sending an email to the address associated with your account. Your continued use of the Service after the effective date constitutes acceptance of the updated policy.</p>
-
-    <h2>13. Contact us</h2>
-    <p>If you have questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+    <h2><span class="num">12</span>Contact</h2>
+    <p>Questions about this Privacy Policy or about your data?</p>
     <p>
-      <strong>Geddes Ventures LLC</strong><br>
       Email: <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a><br>
-      Website: <a href="https://chirp-kids.com">chirp-kids.com</a>
+      Mail: Geddes Ventures LLC, 31926 Watergate Ct, Westlake Village, CA 91361-4020, USA
     </p>
 
-  </div>
-</div>
+  </article>
+</main>
 
 <footer>
-  <div class="footer-logo">chirp<span>.</span></div>
-  <div class="footer-links">
-    <a href="/" class="footer-link">Home</a>
-    <a href="/privacy.html" class="footer-link">Privacy Policy</a>
-    <a href="/terms.html" class="footer-link">Terms of Service</a>
-    <a href="mailto:hello@chirp-kids.com" class="footer-link">Contact</a>
-  </div>
-  <div class="footer-copy">© 2026 Geddes Ventures LLC</div>
+  © 2026 Geddes Ventures LLC ·
+  <a href="/privacy">Privacy</a> ·
+  <a href="/terms">Terms</a> ·
+  <a href="mailto:hello@chirp-kids.com">Contact</a>
 </footer>
 
 </body>
