@@ -4,49 +4,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Screen Time Guides for Parents (2026) | Chirp</title>
-<meta name="description" content="Practical guides for managing kids' screen time. How to make kids earn screen time, stop arguments, set limits by age, and build reward systems that actually work.">
+<meta name="description" content="Practical guides for managing kids' screen time. How to make kids earn it, stop the arguments, set limits by age, build reward systems that stick, and make it work for ADHD homes and co-parents.">
 <link rel="canonical" href="https://chirp-kids.com/guides/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐦</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐣</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{--indigo:#5b5ef4;--indigo-light:#ededfd;--orange:#ff6b35;--orange-light:#fff3ee;--purple:#7c3aed;--bg:#f7f8fc;--white:#ffffff;--text:#1a1d2e;--muted:#8b90a7;--border:#e8eaf0;--navy:#1e1b4b}
+  :root{--indigo:#5b5ef4;--indigo-light:#ededfd;--amber:#fbbf24;--purple:#7c3aed;--bg:#fef9f0;--white:#ffffff;--text:#1a1d2e;--muted:#8b90a7;--border:#ece9e0;--navy:#1e1b4b}
   *{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text)}
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,248,252,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between}
-  .nav-logo{font-family:'Nunito',sans-serif;font-weight:900;font-size:22px;color:var(--indigo);letter-spacing:-0.5px;text-decoration:none}.nav-logo span{color:var(--orange)}
-  .nav-cta{background:var(--indigo);color:white;font-weight:700;border-radius:12px;padding:9px 18px;font-family:'Nunito',sans-serif;text-decoration:none;font-size:14px}
-  .wrap{max-width:760px;margin:0 auto;padding:96px 24px 80px}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(254,249,240,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between}
+  .nav-logo{font-family:'Nunito',sans-serif;font-weight:900;font-size:22px;color:var(--indigo);letter-spacing:-0.5px;text-decoration:none}.nav-logo span{color:var(--amber)}
+  .nav-cta{background:var(--navy);color:white;font-weight:700;border-radius:12px;padding:9px 18px;font-family:'Nunito',sans-serif;text-decoration:none;font-size:14px}
+  .wrap{max-width:780px;margin:0 auto;padding:96px 24px 80px}
   .page-label{font-family:'Nunito',sans-serif;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--indigo);margin-bottom:12px}
   .page-h1{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(28px,5vw,42px);letter-spacing:-1.5px;line-height:1.1;color:var(--navy);margin-bottom:16px}
-  .page-sub{font-size:17px;line-height:1.7;color:var(--muted);margin-bottom:48px}
-  .guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
-  .guide-card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:24px;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;display:block}
+  .page-sub{font-size:17px;line-height:1.7;color:var(--muted);margin-bottom:40px}
+  .guide-section-label{font-family:'Nunito',sans-serif;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:36px 0 14px}
+  .guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+  .guide-card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:24px;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s,border-color 0.2s;display:block}
   .guide-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.08);border-color:var(--indigo)}
+  .guide-card.spotlight{border-color:#ddd6fe;background:linear-gradient(135deg,#faf8ff 0%,white 60%)}
   .guide-card-emoji{font-size:28px;margin-bottom:12px}
   .guide-card-title{font-family:'Nunito',sans-serif;font-weight:800;font-size:17px;color:var(--navy);margin-bottom:8px;line-height:1.3}
   .guide-card-desc{font-size:14px;color:var(--muted);line-height:1.6}
   .guide-card-link{font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;color:var(--indigo);margin-top:14px;display:block}
-  footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center}
-  .footer-logo{font-family:'Nunito',sans-serif;font-weight:900;font-size:20px;color:var(--indigo);margin-bottom:6px}.footer-logo span{color:var(--orange)}
+  .pill{display:inline-block;font-family:'Nunito',sans-serif;font-weight:800;font-size:10px;letter-spacing:0.5px;text-transform:uppercase;color:var(--purple);background:#f3e8ff;padding:3px 9px;border-radius:100px;margin-bottom:12px}
+  footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;margin-top:24px}
+  .footer-logo{font-family:'Nunito',sans-serif;font-weight:900;font-size:20px;color:var(--indigo);margin-bottom:6px}.footer-logo span{color:var(--amber)}
   .footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:12px}
   .footer-link{font-size:13px;color:var(--muted);text-decoration:none}.footer-copy{font-size:12px;color:var(--muted)}
 </style>
 </head>
 <body>
+<!-- APP STORE URL: replace ALL instances of "APPSTORE_URL_HERE" with the live listing link -->
 <nav>
   <a href="/" class="nav-logo">chirp<span>.</span></a>
-  <a href="/#beta" class="nav-cta">🐦 Join beta</a>
+  <a href="APPSTORE_URL_HERE" class="nav-cta">🐣 Get Chirp</a>
 </nav>
 <div class="wrap">
   <div class="page-label">Guides · 2026</div>
   <h1 class="page-h1">Screen Time Guides for Parents</h1>
-  <p class="page-sub">Practical, no-fluff guides for managing kids' screen time. How to build systems that work, stop the daily arguments, and make screen time something kids earn — not demand.</p>
+  <p class="page-sub">Practical, no-fluff guides for managing kids' screen time. How to build systems that work, stop the daily arguments, and make screen time something kids earn — not demand. Plus how it all fits homes that run on structure, and families split across two houses.</p>
+
+  <div class="guide-section-label">Start here</div>
   <div class="guide-grid">
     <a href="/guides/how-to-make-kids-earn-screen-time.html" class="guide-card">
       <div class="guide-card-emoji">⏱️</div>
       <div class="guide-card-title">How to Make Kids Earn Screen Time</div>
       <div class="guide-card-desc">The complete guide to building an earn system — task lists, minute values, age-appropriate chores, and the rules that make it stick.</div>
+      <div class="guide-card-link">Read guide →</div>
+    </a>
+    <a href="/guides/screen-time-reward-system.html" class="guide-card">
+      <div class="guide-card-emoji">🏆</div>
+      <div class="guide-card-title">Screen Time Reward System That Works</div>
+      <div class="guide-card-desc">Why most systems fail within two weeks and what the ones that stick have in common. Includes a starter task template.</div>
       <div class="guide-card-link">Read guide →</div>
     </a>
     <a href="/guides/how-to-stop-screen-time-arguments.html" class="guide-card">
@@ -61,16 +73,38 @@
       <div class="guide-card-desc">AAP guidelines plainly explained — from toddlers to teens. How much is actually recommended and how to enforce it in real life.</div>
       <div class="guide-card-link">Read guide →</div>
     </a>
-    <a href="/guides/screen-time-reward-system.html" class="guide-card">
-      <div class="guide-card-emoji">🏆</div>
-      <div class="guide-card-title">Screen Time Reward System That Works</div>
-      <div class="guide-card-desc">Why most systems fail within two weeks and what the ones that stick have in common. Includes a starter task template.</div>
+  </div>
+
+  <div class="guide-section-label">For your situation</div>
+  <div class="guide-grid">
+    <a href="/guides/adhd-screen-time-reward-system.html" class="guide-card spotlight">
+      <span class="pill">Structure &amp; ADHD</span>
+      <div class="guide-card-emoji">💜</div>
+      <div class="guide-card-title">A Reward System That Works for ADHD Kids</div>
+      <div class="guide-card-desc">The token economy clinicians teach, made consistent enough to survive a real week. Why paper charts fall apart and how to run one that sticks.</div>
       <div class="guide-card-link">Read guide →</div>
     </a>
+    <a href="/guides/co-parenting-screen-time-two-houses.html" class="guide-card spotlight">
+      <span class="pill">Two households</span>
+      <div class="guide-card-emoji">🏠</div>
+      <div class="guide-card-title">Co-Parenting Screen Time Across Two Houses</div>
+      <div class="guide-card-desc">One shared system instead of two sets of rules. End the "but Dad said yes" problem — one balance that travels with the kid, no second subscription.</div>
+      <div class="guide-card-link">Read guide →</div>
+    </a>
+  </div>
+
+  <div class="guide-section-label">Compare &amp; for professionals</div>
+  <div class="guide-grid">
     <a href="/guides/best-app-kids-earn-screen-time.html" class="guide-card">
       <div class="guide-card-emoji">📱</div>
       <div class="guide-card-title">Best Apps for Kids to Earn Screen Time</div>
-      <div class="guide-card-desc">Honest comparison of Chirp, ScreenCoach, Gleam, and Kidslox. What each does well and which one fits your family.</div>
+      <div class="guide-card-desc">Honest comparison of Chirp, ScreenCoach, Gleam, and Kidslox. What each does well, and which one fits your family.</div>
+      <div class="guide-card-link">Read guide →</div>
+    </a>
+    <a href="/guides/chirp-for-clinicians.html" class="guide-card">
+      <div class="guide-card-emoji">🩺</div>
+      <div class="guide-card-title">Chirp for Clinicians &amp; Coaches</div>
+      <div class="guide-card-desc">For the OTs, ADHD coaches, behavior therapists, and counselors who teach token economies. How Chirp maps to what you already recommend.</div>
       <div class="guide-card-link">Read guide →</div>
     </a>
   </div>
