@@ -373,12 +373,27 @@
     html { scroll-behavior: auto; }
   }
 
+  /* Structure / "do this, get that" section */
+  .structure-section { max-width: 1000px; margin: 0 auto; padding: 40px 24px 70px; }
+  .structure-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 48px 0 28px; }
+  .structure-card { background: white; border: 1.5px solid var(--border); border-radius: 22px; padding: 28px 24px; }
+  .structure-emoji { font-size: 30px; margin-bottom: 14px; }
+  .structure-card h3 { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 18px; color: var(--navy); margin-bottom: 8px; letter-spacing: -0.3px; }
+  .structure-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+  .structure-hook { background: linear-gradient(135deg, var(--indigo-light) 0%, #f3e8ff 100%); border: 1.5px solid #ddd6fe; border-radius: 24px; padding: 28px 30px; display: flex; gap: 18px; align-items: flex-start; max-width: 880px; margin: 0 auto; }
+  .structure-hook-emoji { font-size: 30px; flex-shrink: 0; line-height: 1.2; }
+  .structure-hook-title { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 19px; color: var(--navy); margin-bottom: 8px; letter-spacing: -0.3px; }
+  .structure-hook p { font-size: 15px; color: #4b4f6b; line-height: 1.7; margin-bottom: 12px; }
+  .structure-hook-link { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 14px; color: var(--indigo); text-decoration: none; }
+  .structure-hook-link:hover { text-decoration: underline; }
+
   @media (max-width: 600px) {
     nav .nav-links .nav-link:not(.nav-cta) { display: none; }
     .mockup-section { gap: 12px; }
     .phone { width: 200px; max-width: 200px; }
     .phone:nth-child(2) { display: none; }
     .launch-section { padding: 40px 24px; border-radius: 24px; }
+    .structure-hook { flex-direction: column; gap: 10px; padding: 24px 22px; }
   }
 </style>
 </head>
@@ -523,6 +538,37 @@
       <h3>Approve. Time unlocks.</h3>
       <p>You get a push notification, approve in one tap, earned minutes go into the kid's bank. When they're ready to use them, they start a timer and watch it count down.</p>
     </article>
+  </div>
+</section>
+
+<section id="structure" class="structure-section">
+  <div class="section-label" style="text-align:center;">Why it sticks</div>
+  <h2 class="section-title" style="text-align:center;">The "do this, get that" loop kids actually respond to.</h2>
+  <p class="section-sub" style="text-align:center; margin: 0 auto;">Chirp runs on the oldest, most reliable idea in behavior: clear effort in, clear reward out. Visible, immediate, and the same every single day.</p>
+  <div class="structure-grid">
+    <article class="structure-card">
+      <div class="structure-emoji" aria-hidden="true">📋</div>
+      <h3>Clear expectations</h3>
+      <p>Every task is spelled out and worth a set number of minutes. No "we'll see," no moving targets. Kids always know exactly what earns what.</p>
+    </article>
+    <article class="structure-card">
+      <div class="structure-emoji" aria-hidden="true">⚡️</div>
+      <h3>Immediate reinforcement</h3>
+      <p>Finish, submit, get approved, watch the balance jump. The reward lands right next to the effort, which is what actually turns it into a habit.</p>
+    </article>
+    <article class="structure-card">
+      <div class="structure-emoji" aria-hidden="true">🔁</div>
+      <h3>Consistent every day</h3>
+      <p>The rules don't bend with your mood or change between parents. The system decides, so the routine holds even on the hard days.</p>
+    </article>
+  </div>
+  <div class="structure-hook">
+    <div class="structure-hook-emoji" aria-hidden="true">💜</div>
+    <div>
+      <div class="structure-hook-title">Especially for the homes that run on structure</div>
+      <p>If your family thrives on predictable routines and clear, visual expectations — including many families raising kids with ADHD — Chirp is the reward chart you've probably already been told to try, rebuilt so it survives a real week. It's the same positive-reinforcement, token-style approach that therapists and coaches teach, made instant, visible, and consistent across both parents.</p>
+      <a href="/guides/adhd-screen-time-reward-system.html" class="structure-hook-link">How Chirp fits a structured routine →</a>
+    </div>
   </div>
 </section>
 
