@@ -60,7 +60,7 @@
       "name": "Family",
       "price": "6.99",
       "priceCurrency": "USD",
-      "description": "Unlimited children, unlimited tasks, co-parent sharing, leaderboards, streaks, sibling gifting, full task history and trends. 7-day free trial. Annual plan available at $49.99/year (save 40%)."
+      "description": "Unlimited children, unlimited tasks, family leaderboard, sibling gifting, full task history and trends. 7-day free trial. Annual plan available at $49.99/year (save 40%)."
     }
   ],
   "publisher": {
@@ -137,7 +137,7 @@
       "name": "Is Chirp free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, free for 1 kid and up to 5 active tasks, forever. The Family plan ($6.99/month or $49.99/year with a 7-day free trial) unlocks unlimited kids, unlimited tasks, co-parent sharing, leaderboards, streaks, sibling gifting, and full history."
+        "text": "Yes, free for 1 kid and 5 active tasks, forever, including daily streaks and co-parent sharing. The Family plan ($6.99/month or $49.99/year with a 7-day free trial) unlocks unlimited kids, unlimited tasks, the family leaderboard, sibling gifting, and trends with full history."
       }
     },
     {
@@ -172,7 +172,7 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
 
-  nav {
+  body > nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(254, 249, 240, 0.92); backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px;
@@ -365,7 +365,7 @@
   .footer-logo span { color: var(--amber); }
   .footer-tagline { font-size: 14px; margin-bottom: 24px; }
   .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
-  .footer-link { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.15s; }
+  .footer-link { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.15s; }
   .footer-link:hover { color: white; }
   .footer-copy { font-size: 12px; }
 
@@ -753,10 +753,10 @@
         <li>5 active tasks</li>
         <li>Timer + balance</li>
         <li>Manual approval</li>
-        <li>Photo proof</li>
+        <li>Photo + note proof</li>
         <li>Push notifications</li>
-        <li class="muted">Co-parent sharing</li>
-        <li class="muted">Leaderboards, streaks, gifting</li>
+        <li>Daily streaks</li>
+        <li>Co-parent sharing</li>
       </ul>
       <a href="APPSTORE_URL_HERE" class="price-btn price-btn-free">Download free</a>
     </div>
@@ -766,10 +766,10 @@
       <div class="price-amount" id="family-amount"><sup>$</sup>6<span class="cents">.99</span></div>
       <div class="price-period" id="family-period">per month<br><span class="trial">7-day free trial</span></div>
       <ul class="price-features">
+        <li>Everything in Free, plus:</li>
         <li>Unlimited kids</li>
         <li>Unlimited tasks + templates</li>
-        <li>Co-parent sharing</li>
-        <li>Leaderboards + streaks</li>
+        <li>Family leaderboard</li>
         <li>Sibling gifting</li>
         <li>Trends + full history</li>
       </ul>
@@ -805,7 +805,7 @@
     </details>
     <details class="faq-item">
       <summary>Is Chirp free?</summary>
-      <p>Yes, free forever for 1 kid and up to 5 active tasks. The Family plan ($6.99/month or $49.99/year with a 7-day free trial) unlocks unlimited kids, unlimited tasks, co-parent sharing, leaderboards, streaks, sibling gifting, and full task history.</p>
+      <p>Yes, free forever for 1 kid and 5 active tasks, including daily streaks and co-parent sharing. The Family plan ($6.99/month or $49.99/year with a 7-day free trial) unlocks unlimited kids, unlimited tasks, the family leaderboard, sibling gifting, and trends with full history.</p>
     </details>
     <details class="faq-item">
       <summary>What devices does Chirp support?</summary>
@@ -871,8 +871,9 @@
     <a href="/guides/" class="footer-link">Guides</a>
     <a href="/privacy.html" class="footer-link">Privacy Policy</a>
     <a href="/terms.html" class="footer-link">Terms of Service</a>
+    <a href="/delete-account.html" class="footer-link">Delete account</a>
+    <a href="/support.html" class="footer-link">Support</a>
     <a href="mailto:hello@chirp-kids.com" class="footer-link">Contact</a>
-    <a href="mailto:hello@chirp-kids.com" class="footer-link">Support</a>
   </nav>
   <div class="footer-copy">© 2026 Geddes Ventures LLC · Built by a parent of three.</div>
 </footer>
