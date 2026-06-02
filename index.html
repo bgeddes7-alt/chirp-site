@@ -319,7 +319,12 @@
   .price-plan { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 8px; }
   .price-amount { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 52px; color: var(--navy); letter-spacing: -2px; line-height: 1; }
   .price-amount sup { font-size: 22px; vertical-align: top; margin-top: 10px; display: inline-block; }
-  .price-period { font-size: 14px; color: var(--muted); margin: 4px 0 20px; line-height: 1.5; }
+  .price-period { font-size: 14px; color: var(--muted); margin: 4px 0 20px; line-height: 1.5; min-height: 42px; }
+  .price-tagline { font-size: 13px; color: var(--muted); line-height: 1.4; margin: 0 0 18px; min-height: 36px; }
+  .price-hero { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 16px; letter-spacing: -0.3px; text-align: left; padding: 12px 14px; border-radius: 12px; margin: 0 0 18px; display: flex; align-items: center; gap: 8px; line-height: 1.2; }
+  .price-hero.cap { background: var(--bg); color: var(--navy); border: 1.5px solid var(--border); }
+  .price-hero.unlimited { background: var(--indigo-light); color: var(--indigo-dark); border: 1.5px solid var(--indigo); }
+  .price-hero.unlimited::before { content: '\221E'; font-size: 20px; font-weight: 900; color: var(--indigo); }
   .price-features { list-style: none; text-align: left; margin-bottom: 24px; }
   .price-features li { font-size: 14px; color: var(--text); padding: 7px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
   .price-features li:last-child { border: none; }
@@ -736,7 +741,7 @@
 <section id="pricing" style="text-align: center;">
   <div class="section-label">Pricing</div>
   <h2 class="section-title">Free to start. Upgrade when you're ready.</h2>
-  <p class="section-sub" style="margin: 0 auto;">Free forever for one kid. Try the whole loop before paying. Family unlocks everything else.</p>
+  <p class="section-sub" style="margin: 0 auto;">Free forever for one kid. Upgrade to Family to run the whole household.</p>
 
   <div class="billing-toggle" role="group" aria-label="Billing period">
     <button type="button" class="billing-opt active" data-billing="monthly" aria-pressed="true">Monthly</button>
@@ -748,13 +753,12 @@
       <div class="price-plan">Free</div>
       <div class="price-amount"><sup>$</sup>0</div>
       <div class="price-period">forever</div>
+      <div class="price-tagline">Everything you need to run it for one kid.</div>
+      <div class="price-hero cap">1 child &middot; 5 active tasks</div>
       <ul class="price-features">
-        <li>1 child</li>
-        <li>5 active tasks</li>
-        <li>Timer + balance</li>
-        <li>Manual approval</li>
         <li>Photo + note proof</li>
-        <li>Push notifications</li>
+        <li>One-tap approval + push alerts</li>
+        <li>Timer + banked minutes</li>
         <li>Daily streaks</li>
         <li>Co-parent sharing</li>
       </ul>
@@ -765,13 +769,13 @@
       <div class="price-plan">Family</div>
       <div class="price-amount" id="family-amount"><sup>$</sup>6<span class="cents">.99</span></div>
       <div class="price-period" id="family-period">per month<br><span class="trial">7-day free trial</span></div>
+      <div class="price-tagline">For your whole household, not just one kid.</div>
+      <div class="price-hero unlimited">Unlimited kids + tasks</div>
       <ul class="price-features">
-        <li>Everything in Free, plus:</li>
-        <li>Unlimited kids</li>
-        <li>Unlimited tasks + templates</li>
         <li>Family leaderboard</li>
         <li>Sibling gifting</li>
         <li>Trends + full history</li>
+        <li class="muted">Everything in Free, included</li>
       </ul>
       <a href="APPSTORE_URL_HERE" class="price-btn price-btn-paid">Start free trial</a>
     </div>
