@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chirp Support</title>
+<meta name="description" content="Help and support for Chirp, the family app where kids earn screen time by completing tasks. Contact us at hello@chirp-kids.com.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#5b5ef4;
+    --ink:#1e1b4b;
+    --text:#2a2740;
+    --muted:#6b6880;
+    --bg:#faf9ff;
+    --card:#ffffff;
+    --line:#ecebf5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Nunito',-apple-system,BlinkMacSystemFont,sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--purple);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+
+  /* Top bar */
+  .topbar{padding:22px 0;border-bottom:1px solid var(--line);background:var(--card)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-size:24px;font-weight:900;color:var(--ink);letter-spacing:-0.5px}
+  .logo span{color:var(--purple)}
+  .topbar nav a{font-size:14px;font-weight:700;color:var(--muted);margin-left:18px}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(160deg,#1e1b4b 0%,#2d1b69 55%,#3b1f7a 100%);
+    color:#fff;padding:54px 0 48px;text-align:center;
+  }
+  .hero h1{font-size:34px;font-weight:900;letter-spacing:-0.6px;margin-bottom:10px}
+  .hero p{font-size:16px;color:rgba(255,255,255,0.78);max-width:480px;margin:0 auto}
+
+  /* Contact card */
+  .contact{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:26px;margin:-28px auto 0;position:relative;box-shadow:0 12px 30px rgba(30,27,75,0.08);
+    text-align:center;
+  }
+  .contact .label{font-size:12px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .contact .email{font-size:24px;font-weight:900;color:var(--ink)}
+  .contact .note{font-size:14px;color:var(--muted);margin-top:8px}
+
+  /* Sections */
+  section.block{padding:40px 0 8px}
+  h2{font-size:22px;font-weight:900;color:var(--ink);margin-bottom:18px;letter-spacing:-0.3px}
+
+  .faq{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq details:last-child{border-bottom:none}
+  .faq summary{
+    list-style:none;cursor:pointer;padding:16px 18px;font-weight:800;color:var(--ink);
+    font-size:15.5px;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:20px;color:var(--purple);font-weight:900;flex-shrink:0}
+  .faq details[open] summary::after{content:"\2013"}
+  .faq .answer{padding:0 18px 18px;color:var(--text);font-size:15px}
+  .faq .answer p{margin-bottom:10px}
+  .faq .answer p:last-child{margin-bottom:0}
+
+  /* Footer */
+  footer{margin-top:48px;padding:34px 0;background:var(--ink);color:rgba(255,255,255,0.7);text-align:center}
+  .footer-logo{font-size:22px;font-weight:900;color:#fff;letter-spacing:-0.5px}
+  .footer-logo span{color:var(--purple)}
+  .footer-tagline{font-size:13px;color:rgba(255,255,255,0.6);margin:6px 0 16px}
+  .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margin-bottom:16px}
+  .footer-links a{color:rgba(255,255,255,0.78);font-size:14px;font-weight:600}
+  .footer-copy{font-size:12px;color:rgba(255,255,255,0.5)}
+
+  @media (max-width:520px){
+    .hero h1{font-size:28px}
+    .contact .email{font-size:20px}
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <a href="/" class="logo">chirp<span>.</span></a>
+      <nav><a href="/">Home</a><a href="#faq">FAQ</a></nav>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="wrap">
+      <h1>Support</h1>
+      <p>We are here to help. Most questions are answered below, and you can always reach a real person by email.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="contact">
+      <div class="label">Contact us</div>
+      <a class="email" href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a>
+      <div class="note">We read every message and usually reply within one business day.</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="block" id="faq">
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+
+        <details>
+          <summary>How does Chirp work?</summary>
+          <div class="answer">
+            <p>You set up chores and what each one is worth in screen-time minutes. Your child completes a task, adds a photo or a quick note as proof, and submits it from their own device.</p>
+            <p>You get a notification, approve or deny with one tap, and the earned minutes land in your child's bank. When they want to play or watch, they start a timer and spend the time they earned.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do my kids need their own accounts?</summary>
+          <div class="answer">
+            <p>No. Parents are the only account holders. Children use Chirp inside your account on their own device, and they never create logins or enter personal information.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I set up Chirp on more than one device?</summary>
+          <div class="answer">
+            <p>Install Chirp on your phone and on the device your kids use, such as an iPad or an older iPhone. Sign in with the same account on both, and everything syncs automatically.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I add my partner as a co-parent?</summary>
+          <div class="answer">
+            <p>Open Settings, find Family Sharing, and generate a six-character invite code. Your co-parent enters that code when they sign in, and you both share one account with full access. Co-parent sharing is included for free.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What is free, and what is included with Chirp Family?</summary>
+          <div class="answer">
+            <p>Free includes one child, five active tasks, the full earn, approve, and spend loop, photo and note proof, daily streaks, and co-parent sharing, with no time limit.</p>
+            <p>Chirp Family unlocks unlimited kids, unlimited tasks, and trends. With more than one child you also get the family leaderboard and sibling gifting. Chirp Family is $6.99 per month or $49.99 per year, and it starts with a 7-day free trial.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I manage or cancel my subscription?</summary>
+          <div class="answer">
+            <p>Subscriptions are handled by Apple. On your iPhone or iPad, open Settings, tap your name, then tap Subscriptions and select Chirp to change or cancel your plan. If you cancel during the free trial you will not be charged.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>I subscribed but the app still shows the free plan. What do I do?</summary>
+          <div class="answer">
+            <p>Open Settings inside Chirp and tap Restore Purchases. Make sure you are signed in with the same Apple Account you used to subscribe. If it still does not appear, email us and we will sort it out.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I delete my account and data?</summary>
+          <div class="answer">
+            <p>You can request deletion at any time from the <a href="/delete-account.html">account deletion page</a>, or by emailing us. Deleting your account permanently removes your family's data. See our <a href="/privacy.html">Privacy Policy</a> for details on what we store and why.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>I have a different question.</summary>
+          <div class="answer">
+            <p>Email us at <a href="mailto:hello@chirp-kids.com">hello@chirp-kids.com</a> and we will get back to you, usually within one business day.</p>
+          </div>
+        </details>
+
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-logo">chirp<span>.</span></div>
+      <div class="footer-tagline">Earn your screen time.</div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/delete-account.html">Delete account</a>
+        <a href="mailto:hello@chirp-kids.com">Contact</a>
+      </nav>
+      <div class="footer-copy">&copy; 2026 Geddes Ventures LLC &middot; Built by a parent of three.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
