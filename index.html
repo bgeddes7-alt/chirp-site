@@ -305,10 +305,17 @@
   .fam-arrow { text-align: center; font-size: 18px; opacity: 0.3; }
 
   .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 700px; margin: 48px auto 0; }
+  .billing-toggle { display: inline-flex; gap: 4px; background: white; border: 1.5px solid var(--border); border-radius: 100px; padding: 4px; margin: 28px auto 0; }
+  .billing-opt { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 14px; color: var(--muted); background: transparent; border: none; border-radius: 100px; padding: 9px 20px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+  .billing-opt.active { background: var(--indigo); color: white; }
+  .billing-opt .save-pill { background: var(--amber); color: var(--navy); font-size: 10px; font-weight: 800; padding: 2px 7px; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.3px; }
+  .billing-opt.active .save-pill { background: white; color: var(--indigo); }
+  .price-amount .cents { font-size: 28px; }
+  .price-period .trial { color: var(--indigo); font-weight: 800; }
   .price-card { background: white; border-radius: 28px; padding: 32px; border: 2px solid var(--border); text-align: center; transition: transform 0.2s; }
   .price-card:hover { transform: translateY(-4px); }
-  .price-card.featured { border-color: var(--indigo); position: relative; overflow: hidden; }
-  .price-card.featured::before { content: 'MOST POPULAR'; position: absolute; top: 16px; right: -28px; background: var(--indigo); color: white; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 0.5px; padding: 4px 40px; transform: rotate(45deg); }
+  .price-card.featured { border-color: var(--indigo); position: relative; }
+  .price-badge { position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: var(--indigo); color: white; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; white-space: nowrap; box-shadow: 0 6px 16px rgba(91,94,244,0.35); }
   .price-plan { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 8px; }
   .price-amount { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 52px; color: var(--navy); letter-spacing: -2px; line-height: 1; }
   .price-amount sup { font-size: 22px; vertical-align: top; margin-top: 10px; display: inline-block; }
@@ -731,6 +738,11 @@
   <h2 class="section-title">Free to start. Upgrade when you're ready.</h2>
   <p class="section-sub" style="margin: 0 auto;">Free forever for one kid. Try the whole loop before paying. Family unlocks everything else.</p>
 
+  <div class="billing-toggle" role="group" aria-label="Billing period">
+    <button type="button" class="billing-opt active" data-billing="monthly" aria-pressed="true">Monthly</button>
+    <button type="button" class="billing-opt" data-billing="annual" aria-pressed="false">Annual <span class="save-pill">Save 40%</span></button>
+  </div>
+
   <div class="pricing-grid">
     <div class="price-card">
       <div class="price-plan">Free</div>
@@ -749,9 +761,10 @@
       <a href="APPSTORE_URL_HERE" class="price-btn price-btn-free">Download free</a>
     </div>
     <div class="price-card featured">
+      <div class="price-badge">★ Most Popular</div>
       <div class="price-plan">Family</div>
-      <div class="price-amount"><sup>$</sup>6<span style="font-size:28px">.99</span></div>
-      <div class="price-period">per month · or $49.99/year (save 40%)<br><span style="color:var(--indigo); font-weight:800;">7-day free trial</span></div>
+      <div class="price-amount" id="family-amount"><sup>$</sup>6<span class="cents">.99</span></div>
+      <div class="price-period" id="family-period">per month<br><span class="trial">7-day free trial</span></div>
       <ul class="price-features">
         <li>Unlimited kids</li>
         <li>Unlimited tasks + templates</li>
@@ -864,5 +877,33 @@
   <div class="footer-copy">© 2026 Geddes Ventures LLC · Built by a parent of three.</div>
 </footer>
 
+<script>
+  (function () {
+    var opts = document.querySelectorAll('.billing-opt');
+    var amt = document.getElementById('family-amount');
+    var per = document.getElementById('family-period');
+    if (!opts.length || !amt || !per) return;
+    var data = {
+      monthly: {
+        amt: '<sup>$</sup>6<span class="cents">.99</span>',
+        per: 'per month<br><span class="trial">7-day free trial</span>'
+      },
+      annual: {
+        amt: '<sup>$</sup>4<span class="cents">.17</span>',
+        per: 'per month · billed $49.99/year<br><span class="trial">7-day free trial</span>'
+      }
+    };
+    opts.forEach(function (o) {
+      o.addEventListener('click', function () {
+        opts.forEach(function (x) { x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
+        o.classList.add('active');
+        o.setAttribute('aria-pressed', 'true');
+        var b = o.getAttribute('data-billing');
+        amt.innerHTML = data[b].amt;
+        per.innerHTML = data[b].per;
+      });
+    });
+  })();
+</script>
 </body>
 </html>
