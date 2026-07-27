@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Moat · Dashboard</title>
+<style>
+  .viz-root{
+    color-scheme:light;
+    --page:#f9f9f7; --surface-1:#fcfcfb;
+    --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#898781;
+    --grid:#e1e0d9; --baseline:#c3c2b7; --border:rgba(11,11,11,0.10);
+    --series-1:#2a78d6; --series-2:#eb6834;
+    --delta-up:#006300; --delta-down:#d03b3b;
+    --accent:#0E6B5C;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:where(:not([data-theme="light"])) .viz-root{
+      color-scheme:dark;
+      --page:#0d0d0d; --surface-1:#1a1a19;
+      --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#898781;
+      --grid:#2c2c2a; --baseline:#383835; --border:rgba(255,255,255,0.10);
+      --series-1:#3987e5; --series-2:#d95926;
+      --delta-up:#0ca30c; --delta-down:#d03b3b;
+      --accent:#35A08E;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--page);color:var(--text-primary);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+
+  .head{display:flex;align-items:baseline;justify-content:space-between;
+    border-bottom:2px solid var(--text-primary);padding-bottom:10px;margin-bottom:18px}
+  .mark{font-size:26px;font-weight:800;letter-spacing:.02em}
+  .mark span{color:var(--accent)}
+  .meta{font-size:12px;color:var(--text-muted);text-align:right;line-height:1.5}
+
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px}
+  .tile{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:12px 14px}
+  .tile .k{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
+  .tile .v{font-size:26px;font-weight:700;margin-top:4px}
+  .tile .s{font-size:11.5px;color:var(--text-secondary);margin-top:2px}
+  .delta-up{color:var(--delta-up);font-weight:700}
+  .delta-down{color:var(--delta-down);font-weight:700}
+
+  .card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+  .card h2{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary)}
+  .legend{display:flex;gap:14px;align-items:center;font-size:12px;color:var(--text-secondary)}
+  .legend .chip{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+  .cardhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  svg{display:block;width:100%;height:auto}
+  .axis-t{font-size:10px;fill:var(--text-muted);font-variant-numeric:tabular-nums}
+  details{margin-top:8px}
+  summary{font-size:12px;color:var(--text-muted);cursor:pointer}
+  table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+  th{text-align:left;color:var(--text-muted);font-weight:600;padding:4px 6px;border-bottom:1px solid var(--grid)}
+  td{padding:4px 6px;border-bottom:1px solid var(--grid);font-variant-numeric:tabular-nums;color:var(--text-secondary)}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .rowline{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:6px 0;border-bottom:1px solid var(--grid)}
+  .rowline:last-child{border-bottom:none}
+  .rowline .n{color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .rowline .c{font-variant-numeric:tabular-nums;font-weight:600}
+  .minibar{height:6px;border-radius:3px;background:var(--series-1);margin-top:4px}
+
+  .q{border-top:1px solid var(--grid);padding:10px 0}
+  .q:first-of-type{border-top:none}
+  .q .qh{font-size:12px;color:var(--text-muted);margin-bottom:3px}
+  .q .qt{font-size:13.5px;font-weight:600;line-height:1.35}
+  .q .qt a{color:inherit;text-decoration:none;border-bottom:1px solid var(--baseline)}
+  .q .qb{font-size:12.5px;color:var(--text-secondary);line-height:1.45;margin-top:4px;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .statusword{font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+
+  #tip{position:fixed;pointer-events:none;background:var(--text-primary);color:var(--page);
+    font-size:12px;padding:6px 9px;border-radius:8px;display:none;z-index:9;line-height:1.4;
+    font-variant-numeric:tabular-nums}
+
+  #gate{max-width:380px;margin:120px auto;text-align:center}
+  #gate input{width:100%;padding:10px 12px;font-size:14px;border:1px solid var(--baseline);
+    border-radius:10px;background:var(--surface-1);color:var(--text-primary);margin:14px 0 10px}
+  #gate button{padding:10px 18px;font-size:14px;font-weight:700;border:none;border-radius:10px;
+    background:var(--accent);color:#fff;cursor:pointer}
+  #gate .err{color:var(--delta-down);font-size:12.5px;min-height:16px;margin-top:8px}
+  .hidden{display:none !important}
+  @media (max-width:760px){.tiles{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="viz-root">
+<div id="tip"></div>
+
+<div id="gate" class="hidden">
+  <div class="mark">M<span>O</span>AT</div>
+  <p style="font-size:13px;color:var(--text-secondary);margin-top:10px">Enter the dashboard key.</p>
+  <input id="keyin" type="password" autocomplete="off" placeholder="MOAT_DASHBOARD_KEY">
+  <button id="keygo">Open</button>
+  <div class="err" id="keyerr"></div>
+</div>
+
+<div class="wrap hidden" id="app">
+  <div class="head">
+    <div class="mark">M<span>O</span>AT <span style="font-size:13px;font-weight:600;color:var(--text-muted);letter-spacing:0">dashboard</span></div>
+    <div class="meta" id="metaline">loading</div>
+  </div>
+
+  <div class="tiles" id="opstiles"></div>
+  <div class="tiles" id="growtiles"></div>
+
+  <div class="card">
+    <div class="cardhead">
+      <h2>Last 14 days</h2>
+      <div class="legend" id="chartlegend"></div>
+    </div>
+    <div id="chart"></div>
+    <details><summary>View as table</summary><div id="charttable"></div></details>
+  </div>
+
+  <div class="cols">
+    <div class="card">
+      <h2 style="margin-bottom:8px">Top subreddits (score ≥ 70, 14d)</h2>
+      <div id="subs"></div>
+    </div>
+    <div class="card">
+      <h2 style="margin-bottom:8px">GEO traffic (7d, humans)</h2>
+      <div id="geo"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-bottom:4px">Reply queue</h2>
+    <div id="queue"></div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-bottom:4px">Recent decisions</h2>
+    <div id="recent"></div>
+  </div>
+</div>
+
+<script>
+var API = "https://qxvqcoapvquiisgtslud.supabase.co/functions/v1/moat-dashboard";
+var params = new URLSearchParams(location.search);
+var DEMO = params.has("demo");
+var key = params.get("key") || localStorage.getItem("moat_key") || "";
+
+function el(id){ return document.getElementById(id); }
+function esc(s){ return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function cssv(name){ return getComputedStyle(document.body).getPropertyValue(name).trim(); }
+
+function demoData(){
+  var days = [], names = ["Jul 14","Jul 15","Jul 16","Jul 17","Jul 18","Jul 19","Jul 20","Jul 21","Jul 22","Jul 23","Jul 24","Jul 25","Jul 26","Jul 27"];
+  var pulls = [38,52,41,60,33,47,55,44,62,39,58,49,36,41];
+  var drafts = [4,6,3,8,2,5,7,4,9,3,6,5,2,4];
+  for (var i=0;i<14;i++) days.push({d:names[i],pulled:pulls[i],drafted:drafts[i]});
+  return {
+    generatedAt:new Date().toISOString(), lastPull:new Date(Date.now()-1500000).toISOString(),
+    today:{pulled:41,drafted:4,cap:10,avgScore:63},
+    window:{days:14,pulled:655,drafted:68,approved:31,edited:9,skipped:21,approvalRate:66},
+    days:days,
+    topSubreddits:[{name:"Parenting",count:22},{name:"ADHDparenting",count:15},{name:"ScreenTime",count:11},{name:"daddit",count:8},{name:"Mommit",count:5}],
+    growth:{premium:{now:12,prior:9},trials:{now:5,prior:7},redditScore:{now:214,prior:180},redditComments:{now:57,prior:41},
+      geo:{total:96,pages:[{page:"/guides/screen-time-reward-system.html",count:31},{page:"/guides/adhd-screen-time-reward-system.html",count:24},{page:"/guides/how-to-stop-screen-time-arguments.html",count:18},{page:"/guides/recommended-screen-time-by-age.html",count:12}]},
+      targets:{replied:3,contacted:7,approved:4,identified:8}},
+    queue:[{id:"d1",body:"We had the same 8pm fight every night until we flipped it: screen time starts at zero and gets earned. Took about two weeks to stick.",created_at:new Date().toISOString(),signal:{title:"How do you handle constant screen time meltdowns?",url:"#",subreddit:"Parenting",score:82}}],
+    recent:[{status:"approved",decided_at:new Date().toISOString(),version:1,signal:{title:"Chore apps that worked for your ADHD kid?",url:"#",subreddit:"ADHDparenting"}},
+            {status:"skipped",decided_at:new Date().toISOString(),version:1,signal:{title:"Rant about tablets at dinner",url:"#",subreddit:"Mommit"}}]
+  };
+}
+
+function fmtAgo(iso){
+  if (!iso) return "never";
+  var m = Math.round((Date.now() - new Date(iso).getTime())/60000);
+  if (m < 1) return "just now";
+  if (m < 60) return m + "m ago";
+  var h = Math.round(m/60);
+  if (h < 24) return h + "h ago";
+  return Math.round(h/24) + "d ago";
+}
+
+function deltaHTML(now, prior, goodWhenUp){
+  if (now == null) return '<span class="s">no data yet</span>';
+  if (prior == null || prior === now) return '<span class="s">flat this week</span>';
+  var d = now - prior;
+  var up = d > 0;
+  var good = goodWhenUp ? up : !up;
+  var cls = good ? "delta-up" : "delta-down";
+  var arrow = up ? "▲" : "▼";
+  return '<span class="' + cls + '">' + arrow + " " + (up ? "+" : "") + d + '</span> <span class="s">this week</span>';
+}
+
+function tile(k, v, sub){
+  return '<div class="tile"><div class="k">' + k + '</div><div class="v">' + v + '</div><div class="s">' + (sub || "") + "</div></div>";
+}
+
+function render(data){
+  el("gate").classList.add("hidden");
+  el("app").classList.remove("hidden");
+
+  el("metaline").innerHTML = "last pull " + esc(fmtAgo(data.lastPull)) + "<br>refreshed " + esc(fmtAgo(data.generatedAt));
+
+  el("opstiles").innerHTML =
+    tile("Signals today", data.today.pulled, "pulled from Reddit + reviews") +
+    tile("Drafts today", data.today.drafted + '<span style="font-size:14px;color:var(--text-muted)"> / ' + data.today.cap + "</span>", "daily cap") +
+    tile("Avg score today", data.today.avgScore == null ? "–" : data.today.avgScore, "signal relevance, 0 to 100") +
+    tile("Approval rate", data.window.approvalRate == null ? "–" : data.window.approvalRate + "%", data.window.approved + " approved · " + data.window.edited + " edited · " + data.window.skipped + " skipped, 14d");
+
+  var g = data.growth || {};
+  el("growtiles").innerHTML =
+    tile("Paid subs", g.premium && g.premium.now != null ? g.premium.now : "–", deltaHTML(g.premium && g.premium.now, g.premium && g.premium.prior, true)) +
+    tile("Active trials", g.trials && g.trials.now != null ? g.trials.now : "–", deltaHTML(g.trials && g.trials.now, g.trials && g.trials.prior, true)) +
+    tile("Reddit replies", g.redditComments && g.redditComments.now != null ? g.redditComments.now : "–", deltaHTML(g.redditComments && g.redditComments.now, g.redditComments && g.redditComments.prior, true)) +
+    tile("GEO visits 7d", g.geo ? g.geo.total : "–", g.targets ? (g.targets.replied + " amplifier replies · " + g.targets.contacted + " contacted") : "");
+
+  drawChart(data.days);
+  drawSubs(data.topSubreddits);
+  drawGeo(g.geo);
+  drawQueue(data.queue);
+  drawRecent(data.recent);
+}
+
+function roundTopBar(x, y, w, h, r){
+  if (h <= 0) return "";
+  r = Math.min(r, h, w / 2);
+  return "M" + x + " " + (y + h) + "V" + (y + r) +
+    "Q" + x + " " + y + " " + (x + r) + " " + y +
+    "H" + (x + w - r) +
+    "Q" + (x + w) + " " + y + " " + (x + w) + " " + (y + r) +
+    "V" + (y + h) + "Z";
+}
+
+function drawChart(days){
+  var s1 = cssv("--series-1"), s2 = cssv("--series-2");
+  el("chartlegend").innerHTML =
+    '<span><span class="chip" style="background:' + s1 + '"></span>Signals pulled</span>' +
+    '<span><span class="chip" style="background:' + s2 + '"></span>Replies drafted</span>';
+
+  var W = 940, H = 230, padL = 34, padR = 6, padT = 10, padB = 24;
+  var iw = W - padL - padR, ih = H - padT - padB;
+  var max = 1;
+  days.forEach(function(d){ max = Math.max(max, d.pulled, d.drafted); });
+  var ticks = 4, step = Math.ceil(max / ticks);
+  max = step * ticks;
+
+  var groupW = iw / days.length;
+  var barW = Math.min(16, (groupW - 10) / 2);
+  var svg = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Signals pulled and replies drafted per day, last 14 days">';
+
+  for (var t = 1; t <= ticks; t++){
+    var gy = padT + ih - (ih * t / ticks);
+    svg += '<line x1="' + padL + '" y1="' + gy + '" x2="' + (W - padR) + '" y2="' + gy + '" stroke="var(--grid)" stroke-width="1"/>';
+    svg += '<text class="axis-t" x="' + (padL - 6) + '" y="' + (gy + 3) + '" text-anchor="end">' + (step * t) + "</text>";
+  }
+  svg += '<line x1="' + padL + '" y1="' + (padT + ih) + '" x2="' + (W - padR) + '" y2="' + (padT + ih) + '" stroke="var(--baseline)" stroke-width="1"/>';
+
+  days.forEach(function(d, i){
+    var gx = padL + groupW * i + (groupW - (barW * 2 + 2)) / 2;
+    var h1 = Math.round(ih * d.pulled / max), h2 = Math.round(ih * d.drafted / max);
+    svg += '<path d="' + roundTopBar(gx, padT + ih - h1, barW, h1, 4) + '" fill="' + s1 + '"/>';
+    svg += '<path d="' + roundTopBar(gx + barW + 2, padT + ih - h2, barW, h2, 4) + '" fill="' + s2 + '"/>';
+    if (i % 2 === 1 || days.length <= 7){
+      svg += '<text class="axis-t" x="' + (padL + groupW * i + groupW / 2) + '" y="' + (H - 8) + '" text-anchor="middle">' + esc(d.d) + "</text>";
+    }
+    svg += '<rect data-i="' + i + '" x="' + (padL + groupW * i) + '" y="' + padT + '" width="' + groupW + '" height="' + ih + '" fill="transparent"/>';
+  });
+  svg += "</svg>";
+  el("chart").innerHTML = svg;
+
+  var tip = el("tip");
+  el("chart").querySelectorAll("rect[data-i]").forEach(function(r){
+    r.addEventListener("mousemove", function(ev){
+      var d = days[Number(r.getAttribute("data-i"))];
+      tip.innerHTML = "<b>" + esc(d.d) + "</b><br>" + d.pulled + " pulled · " + d.drafted + " drafted";
+      tip.style.display = "block";
+      tip.style.left = Math.min(ev.clientX + 14, window.innerWidth - 160) + "px";
+      tip.style.top = (ev.clientY + 14) + "px";
+    });
+    r.addEventListener("mouseleave", function(){ tip.style.display = "none"; });
+  });
+
+  var rows = days.map(function(d){
+    return "<tr><td>" + esc(d.d) + "</td><td>" + d.pulled + "</td><td>" + d.drafted + "</td></tr>";
+  }).join("");
+  el("charttable").innerHTML = "<table><tr><th>Day</th><th>Pulled</th><th>Drafted</th></tr>" + rows + "</table>";
+}
+
+function drawSubs(subs){
+  if (!subs || !subs.length){ el("subs").innerHTML = '<div class="s" style="font-size:12.5px;color:var(--text-muted)">Nothing scored 70+ yet.</div>'; return; }
+  var max = subs[0].count || 1, html = "";
+  subs.forEach(function(s){
+    html += '<div style="padding:5px 0"><div class="rowline" style="border:none;padding:0"><span class="n">r/' + esc(s.name) + '</span><span class="c">' + s.count + '</span></div>' +
+      '<div class="minibar" style="width:' + Math.max(4, Math.round(100 * s.count / max)) + '%"></div></div>';
+  });
+  el("subs").innerHTML = html;
+}
+
+function drawGeo(geo){
+  if (!geo || !geo.pages || !geo.pages.length){
+    el("geo").innerHTML = '<div style="font-size:12.5px;color:var(--text-muted)">No tracked visits yet. Beacons are live; give it a day.</div>';
+    return;
+  }
+  var html = "";
+  geo.pages.forEach(function(p){
+    var short = p.page.replace("/guides/", "").replace(".html", "") || p.page;
+    html += '<div class="rowline"><span class="n">' + esc(short) + '</span><span class="c">' + p.count + "</span></div>";
+  });
+  html += '<div class="rowline"><span class="n" style="font-weight:700;color:var(--text-primary)">total</span><span class="c">' + geo.total + "</span></div>";
+  el("geo").innerHTML = html;
+}
+
+function drawQueue(queue){
+  if (!queue || !queue.length){ el("queue").innerHTML = '<div style="font-size:12.5px;color:var(--text-muted);padding:6px 0">Queue is clear. 🎉</div>'; return; }
+  var html = "";
+  queue.forEach(function(q){
+    var sig = q.signal || {};
+    html += '<div class="q"><div class="qh">r/' + esc(sig.subreddit) + " · score " + esc(sig.score) + " · " + esc(fmtAgo(q.created_at)) + "</div>" +
+      '<div class="qt"><a href="' + esc(sig.url) + '" target="_blank" rel="noopener">' + esc(sig.title) + "</a></div>" +
+      '<div class="qb">' + esc(q.body) + "</div></div>";
+  });
+  el("queue").innerHTML = html;
+}
+
+function drawRecent(recent){
+  if (!recent || !recent.length){ el("recent").innerHTML = '<div style="font-size:12.5px;color:var(--text-muted);padding:6px 0">No decisions yet.</div>'; return; }
+  var html = "";
+  recent.forEach(function(r){
+    var sig = r.signal || {};
+    html += '<div class="rowline"><span class="n">r/' + esc(sig.subreddit) + " · " + esc(sig.title) + '</span>' +
+      '<span class="statusword">' + esc(r.status) + "</span></div>";
+  });
+  el("recent").innerHTML = html;
+}
+
+function fail(msg){
+  el("app").classList.add("hidden");
+  el("gate").classList.remove("hidden");
+  el("keyerr").textContent = msg || "";
+}
+
+function load(){
+  if (DEMO){ render(demoData()); return; }
+  if (!key){ fail(""); return; }
+  fetch(API + "?key=" + encodeURIComponent(key))
+    .then(function(r){
+      if (r.status === 403){ localStorage.removeItem("moat_key"); key = ""; fail("That key was not accepted."); return null; }
+      if (!r.ok){ fail("Engine error (" + r.status + "). Try again shortly."); return null; }
+      return r.json();
+    })
+    .then(function(data){
+      if (!data) return;
+      localStorage.setItem("moat_key", key);
+      if (params.has("key")) history.replaceState(null, "", location.pathname);
+      render(data);
+    })
+    .catch(function(){ fail("Could not reach the engine."); });
+}
+
+el("keygo").addEventListener("click", function(){ key = el("keyin").value.trim(); load(); });
+el("keyin").addEventListener("keydown", function(ev){ if (ev.key === "Enter"){ key = el("keyin").value.trim(); load(); } });
+
+load();
+setInterval(load, 300000);
+</script>
+</body>
+</html>
