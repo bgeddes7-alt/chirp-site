@@ -1,1 +1,12 @@
-{ "rewrites": [{ "source": "/r/:code", "destination": "/r-landing.html" }] }
+{
+  "rewrites": [
+    {
+      "source": "/r/:code",
+      "destination": "/r-landing.html"
+    },
+    {
+      "source": "/mcp",
+      "destination": "https://qxvqcoapvquiisgtslud.supabase.co/functions/v1/chirp-chatgpt/mcp"
+    }
+  ]
+}
