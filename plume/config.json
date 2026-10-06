@@ -1,0 +1,39 @@
+{
+  "_notes": "Plume reads this file every time the app opens. Edit and push to change copy, prices and pop-ups with no app update. reserve.url = your Stripe Payment Link (the reserve card and any reserve pop-up stay hidden until it is set). Pop-up fields: id (unique; change it to show again), enabled, screen (home | book | afterScan), title, body, cta, dismiss, action (reserve | book | close | url:https://...), image (https url, optional), minDrawings, maxDrawings, minDaysInstalled, start, end (YYYY-MM-DD), hideIfReserved, once (default true). One pop-up per app open, and none within cooldownDays of the last one.",
+  "reserve": {
+    "enabled": true,
+    "url": "",
+    "head": "Get the real book in June",
+    "body": "A hardcover of this year's drawings, printed and shipped to your door when school lets out. Reserve now and you won't have to think about it again.",
+    "cta": "Reserve my book",
+    "fine": "Full refund anytime before we print.",
+    "reservedNote": "Reserved? You're set. We'll email you in May to pick the cover."
+  },
+  "bookNote": "The preview is a PDF of the whole book, free. Tap the heart on a drawing to give it its own page.",
+  "cooldownDays": 3,
+  "modals": [
+    {
+      "id": "reserve-v1",
+      "enabled": true,
+      "screen": "afterScan",
+      "minDrawings": 5,
+      "hideIfReserved": true,
+      "title": "Your year, in a real book",
+      "body": "Every drawing you save goes into a hardcover we print in June and ship to your door. Reserve it now and forget about it.",
+      "cta": "Reserve my book",
+      "dismiss": "Not now",
+      "action": "reserve"
+    },
+    {
+      "id": "heart-tip-v1",
+      "enabled": true,
+      "screen": "home",
+      "minDrawings": 12,
+      "title": "Got a favorite?",
+      "body": "Open a drawing and tap the heart. Favorites get a whole page in the book.",
+      "cta": "Got it",
+      "dismiss": "Close",
+      "action": "close"
+    }
+  ]
+}

@@ -8,5 +8,20 @@
       "source": "/mcp",
       "destination": "https://qxvqcoapvquiisgtslud.supabase.co/functions/v1/chirp-chatgpt/mcp"
     }
+  ],
+  "headers": [
+    {
+      "source": "/plume/config.json",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300"
+        }
+      ]
+    }
   ]
 }
