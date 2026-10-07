@@ -2,7 +2,7 @@
   "_notes": "Plume reads this file every time the app opens. Edit and push to change copy, prices and pop-ups with no app update. reserve.url = your Stripe Payment Link (the reserve card and any reserve pop-up stay hidden until it is set). Pop-up fields: id (unique; change it to show again), enabled, screen (home | book | afterScan), title, body, cta, dismiss, action (reserve | book | close | url:https://...), image (https url, optional), minDrawings, maxDrawings, minDaysInstalled, start, end (YYYY-MM-DD), hideIfReserved, once (default true). One pop-up per app open, and none within cooldownDays of the last one.",
   "reserve": {
     "enabled": true,
-    "url": "",
+    "url": "https://buy.stripe.com/eVq00c4xQgFs945av6ao800",
     "head": "Get the real book in June",
     "body": "A hardcover of this year's drawings, printed and shipped to your door when school lets out. Reserve now and you won't have to think about it again.",
     "cta": "Reserve my book",
